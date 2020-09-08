@@ -10,3 +10,5 @@ this is still second paragraph. these are some words.
 this is still second paragraph. these are some words.
 
 this is a [link](https://youtube.com)
+
+this is **bold**. this is *italicized*.
