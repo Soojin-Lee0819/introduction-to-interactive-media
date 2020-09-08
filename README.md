@@ -14,4 +14,4 @@ this is a [link](https://youtube.com)
 this is **bold**. this is *italicized*.
 
 here is an image:
-![](media/schedule.png)
+![](september8/schedule.png)
