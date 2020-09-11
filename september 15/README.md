@@ -1,6 +1,6 @@
 # Production Assignment 1: Processing Self Portrait
 
-This activity proved to be quite time consuming, as the coordinates of the shapes were opposite to what we are taught in high school, going right and down with every increase instead of right and up. Because of this, it took some time for me to get used to writing the code for the portrait.
+This activity proved to be quite time consuming, as the coordinates of the shapes were opposite to what we are taught in high school, going right and down with every increase instead of right and up. Because of this, it took some time for me to get used to writing the code for the portrait. My final self portrait is shown below: ![](images/finalsketch.png)
 
 Some difficulties I encountered during the creation of my self portrait is as follows:
 
