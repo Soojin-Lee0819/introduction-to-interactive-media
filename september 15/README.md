@@ -8,7 +8,7 @@ Some difficulties I encountered during the creation of my self portrait is as fo
 Even if I learned Javascript in the past, I momentarily forgot how to add comments. Because I did not know how to label my lines of code, I did not remember what ellipses or lines stood for each body part. As a result, I had to change the coordinate of each code to remember which line or ellipse it is. Only when searching how to add comments did I learn how.
 
 ## 2. Lack of knowledge regarding all shapes
-In addition, because I decided to experiment with Processing before learning more shapes in class, I was met with harsh lines for the nose, bangs, and mouth as I did not know the arc function yet. A picture of my rough sketch is shown below: ![](september15/roughsketch.png)
+In addition, because I decided to experiment with Processing before learning more shapes in class, I was met with harsh lines for the nose, bangs, and mouth as I did not know the arc function yet. A picture of my rough sketch is shown below: ![](september15/rough sketch.png)
 
 ## 3. Not changing the canvas before coding
 In addition, because Processing starts off with a small canvas, I did not know you could change the size of the canvas until after I finished coding my self portrait. As a result, I had to multiply each coordinate by a specific number, so they all fall in the same area as they were in the smaller canvas.
