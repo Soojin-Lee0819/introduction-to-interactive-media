@@ -24,7 +24,7 @@ In addition, because Processing starts off with a small canvas, I did not know y
 Coloring also became an issue for me, as there was no option to copy the RGB code straight from the Color Selector and I had to manually type it in. In addition, as some of the lines such as my portrait's bangs are not considered a *"shape"* and therefore could not be filled with color, making it less realistic. As a result, I had to use extra shapes and remove their stroke to fill in the *"bald spots"* and make it look more natural.
 
 ## 6. Coding the animations
-Lastly, after inputting all the shapes, I wanted to add animations to make it engaging to the viewer. This proved difficult when first using the *"less than or equal to"* function instead of the *"equal to"* function (ex: if the position is <= 85, it will move down) when animating the position of a shape, as it would not go back to the original position (ex: the original position was 95) as even one pixel less than 85 it will go back to moving up and down without returning to the original position.
+Lastly, after inputting all the shapes, I wanted to add animations to make it engaging to the viewer. This proved difficult when first using the *"less than or equal to"* function instead of the *"equal to"* function (ex: if the position is <= 85, it will move down) when animating the position of a shape, as it would not go back to the original position (ex: the original position was 95) as even one pixel less than 85 it will go back to moving up and down without returning to the original position. This code is seen below:
          
          if (eyebrowsmove >= 85) { 
           eyebrowsmove = eyebrowsmove - 1;
@@ -32,4 +32,10 @@ Lastly, after inputting all the shapes, I wanted to add animations to make it en
           eyebrowsmove = eyebrowsmove + 1;
         }
 
+This is the code I ended up using instead:
 
+         if (eyebrowsmove == 95) { 
+             eyebrowsmove = eyebrowsmove - 10;
+           } else {
+             eyebrowsmove = eyebrowsmove + 10;
+           }
