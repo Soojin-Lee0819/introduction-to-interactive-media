@@ -1,7 +1,8 @@
 # Production Assignment 1: Processing Self Portrait
 
 This activity proved to be quite time consuming, as the coordinates of the shapes were opposite to what we are taught in high school, going right and down with every increase instead of right and up. Because of this, it took some time for me to get used to writing the code for the portrait. My final self portrait is shown below:
-![](images/finalsketch.png)
+
+![](images/portraitsketch.png)
 
 Some difficulties I encountered during the creation of my self portrait is as follows:
 
@@ -10,6 +11,7 @@ Even if I learned Javascript in the past, I momentarily forgot how to add commen
 
 ## 2. Lack of knowledge regarding all shapes
 In addition, because I decided to experiment with Processing before learning more shapes in class, I was met with harsh lines for the nose, bangs, and mouth as I did not know the arc function yet. A picture of my rough sketch is shown below:
+
 ![](images/roughsketch.png)
 
 ## 3. Not changing the canvas before coding
