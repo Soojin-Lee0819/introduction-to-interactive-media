@@ -4,6 +4,10 @@ This activity proved to be quite time consuming. Because of this, it took some t
 
 ![](images/portraitsketch.png)
 
+and the animated version of my file is below:
+
+![alt-text](images/processinggif.gif)
+
 Some difficulties I encountered during the creation of my self portrait is as follows:
 
 ## 1. Having the coordinates opposite to math coordinates
