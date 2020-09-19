@@ -1,12 +1,12 @@
-# Production Assignment 1: Processing Self Portrait
+# Production Assignment 2: Processing Work of Art
 
 This activity proved to be quite time consuming. Because of this, it took some time for me to get used to writing the code for the portrait. My final self portrait is shown below:
 
-![](images/portraitsketch.png)
+![](images/finalsketch.png)
 
 and the animated version of my file is below:
 
-![alt-text](images/processinggif.gif)
+![alt-text](images/butterfly.gif)
 
 Some difficulties I encountered during the creation of my self portrait is as follows:
 
@@ -19,7 +19,7 @@ Even if I learned Javascript in the past, I momentarily forgot how to add commen
 ## 3. Lack of knowledge regarding all shapes
 In addition, because I decided to experiment with Processing before learning more shapes in class, I was met with harsh lines for the nose, bangs, and mouth as I did not know the arc function yet. A picture of my rough sketch is shown below:
 
-![](images/roughsketch.png)
+![](images/butterflybug.png)
 
 ## 4. Not changing the canvas before coding
 In addition, because Processing starts off with a small canvas, I did not know you could change the size of the canvas until after I finished coding my self portrait. As a result, I had to multiply each coordinate by a specific number, so they all fall in the same area as they were in the smaller canvas.
