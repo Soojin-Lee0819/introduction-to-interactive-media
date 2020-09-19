@@ -1,6 +1,6 @@
 # Production Assignment 2: Processing Work of Art
 
-This activity proved to be quite time consuming. Because of this, it took some time for me to get used to writing the code for the portrait. My final self portrait is shown below:
+Having experience with Processing from the previous assignment, I was able to finish this assignment at a quicker time, even if it involved new commands. My final work of art is shown below:
 
 ![](images/finalsketch.png)
 
@@ -8,18 +8,40 @@ and the animated version of my file is below:
 
 ![alt-text](images/butterfly.gif)
 
-Some difficulties I encountered during the creation of my self portrait is as follows:
+Some difficulties I encountered during the creation of my work of art is as follows:
 
-## 1. Having the coordinates opposite to math coordinates
-In high school Mathematics, we are taught that with every increase of a graph, it goes up and right. For Processing, however, the coding for shapes goes right and *down* instead, leading me to being confused and forgetting every few minutes.
-
-## 2. Not knowing how to add comments
-Even if I learned Javascript in the past, I momentarily forgot how to add comments. Because I did not know how to label my lines of code, I did not remember what ellipses or lines stood for each body part. As a result, I had to change the coordinate of each code to remember which line or ellipse it is. Only when searching how to add comments did I learn how.
-
-## 3. Lack of knowledge regarding all shapes
-In addition, because I decided to experiment with Processing before learning more shapes in class, I was met with harsh lines for the nose, bangs, and mouth as I did not know the arc function yet. A picture of my rough sketch is shown below:
+## 1. Attention to detail
+Because I wanted this work to be a step up from what I coded for my first assignment, I wanted it to resemble a butterfly. As a result, I used the curve() function for the first time for the wings, and lines and ellipses for the detail. This, I could say, was the longest part in my coding process. A picture of my rough sketch is shown below:
 
 ![](images/originalsketch.png)
+
+## 2. Animating different colors inside the while() function
+For my work of art, I wanted different butterflies to show different colors every second, to give an illuminated light effect like those you see on Christmas. However, when putting the random color generating code *outside* the while() function, it would only generate random colors and leave it at that specific color for the whole run, not changing color like I wanted to.
+
+void wings(int xstartingpoint, int ystartingpoint) {
+    translate(xstartingpoint, ystartingpoint);
+    stroke(255, random(255), random(255));
+      fill (random(255), random(255), random(255));
+      strokeWeight (3);
+      }
+      
+ However, after watching
+
+ void pattern() {
+    xstartingpoint = 400;
+    ystartingpoint = 100;
+    while (xstartingpoint < width) {
+      butterfly.wings(xstartingpoint, ystartingpoint);
+      butterfly.wings(xstartingpoint, ystartingpoint);
+      xstartingpoint = xstartingpoint + 1;
+      stroke(255, random(255), random(255));
+      fill (random(255), random(255), random(255));
+      strokeWeight (3);
+    }
+  }
+
+## 3. Lack of knowledge regarding all shapes
+In addition, because I decided to experiment with Processing before learning more shapes in class, I was met with harsh lines for the nose, bangs, and mouth as I did not know the arc function yet.
 
 ## 4. Not changing the canvas before coding
 In addition, because Processing starts off with a small canvas, I did not know you could change the size of the canvas until after I finished coding my self portrait. As a result, I had to multiply each coordinate by a specific number, so they all fall in the same area as they were in the smaller canvas.
