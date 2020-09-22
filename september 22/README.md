@@ -45,6 +45,6 @@ At first, I did not know the reason behind this lack of color, even though I fol
           }
 
 ## 3. Positioning of butterflies
-Early on in my coding process, I found that putting my code inside the while() loop were causing my butterflies to be laid out in a mandala pattern, and I didn't know why. This may have been caused by my constant rotation of the shapes when I was initially sketching the butterfly, which was then carried out when I was moving butterflies to the right. Thankfully, after setting restrictions of the x and y starting point, I was able to get them in a straighter, cleaner pattern.
+Early on in my coding process, I found that putting my code inside the while() loop were causing my butterflies to be laid out in a mandala pattern, and I didn't know why. This may have been caused by my constant rotation of the shapes when I was initially sketching the butterfly, which was then carried out when I was moving butterflies to the right. Even though it looked quite pleasing, I found it to be a bit too messy. Thankfully, after setting restrictions of the x and y starting point, I was able to get them in a straighter, cleaner pattern.
 
 ![](images/butterflybug.png)
