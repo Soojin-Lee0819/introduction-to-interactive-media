@@ -11,12 +11,16 @@ and the animated version of my file is below:
 Some difficulties I encountered during the creation of my work of art is as follows:
 
 ## 1. Attention to detail
-Because I wanted this work to be a step up from what I coded for my first assignment, I wanted it to resemble a butterfly. As a result, I used the curve() function for the first time for the wings, and lines and ellipses for the detail. This, I could say, was the longest part in my coding process. A picture of my rough sketch is shown below:
+Because I wanted this work to be a step up from what I coded for my first assignment, I wanted it to resemble a butterfly like what I had seen in the pages of COMPUTER GRAPHICS AND ART May 1976 edition. The screenshot of my inspiration is shown below. 
+
+![](images/butterflyinspo.png)
+
+As a result, I used the curve() function for the first time for the wings, and lines and ellipses for the detail. This, I could say, was the longest part in my coding process. A picture of my rough sketch is shown below:
 
 ![](images/originalsketch.png)
 
 ## 2. Animating different colors inside the while() function
-For my work of art, I wanted different butterflies to show different colors every second, to give an illuminated light effect like those you see on Christmas. However, when putting the random color generating code *outside* the while() function, it would only generate random colors and leave it at that specific color for the whole run, not changing color like I wanted to.
+For my work of art, I wanted different butterflies to show different colors every second, to give an illuminated light effect like those you see on Christmas nights. However, when putting the random color generating code *outside* the while() function, it would only generate random colors in the beginning of the run and leave it at that specific color for the whole run, not changing color like I wanted to.
 
         void wings(int xstartingpoint, int ystartingpoint) {
             translate(xstartingpoint, ystartingpoint);
@@ -25,7 +29,7 @@ For my work of art, I wanted different butterflies to show different colors ever
               strokeWeight (3);
               }
 
-However, after watching The Coding Train on Youtube and how to create animations while still using the while() function, I realized that you have to add the random color generating code *inside* the while function.
+At first, I did not know the reason behind this lack of color, even though I followed exactly what I did in my first assignment. However, after watching The Coding Train's Processing Tutorial 6.1 on Youtube, showing how to create animations while still using the while() function, I realized that you have to add the random color generating code *inside* the while() function. This is because the while() function constantly reloads itself, so it makes sense why it should be inside instead of outside. The final code that I used in this assignment is below:
 
          void pattern() {
             xstartingpoint = 400;
