@@ -1,10 +1,10 @@
-![](images/images/onecube.png) ![](images/twocubes.png)
+![](images/onecube.png) ![](images/twocubes.png)
 
-![](images/images/flowercube.png)
+![](images/flowercube.png)
 
-![](images/images/roughcube.png)
+![](images/roughcube.png)
 
-![](images/images/finalsketch.png)
+![](images/finalsketch.png)
 
 ![alt-text](images/finalsketch.gif)
  
