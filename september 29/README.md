@@ -31,7 +31,8 @@ However, I did not just want it to be a simple circle design. Since I wanted thi
 
 ![](images/twocubes.png)
 
-## Final Details
-After creating this code, I felt like this was a bit too simple and too similar to my second assignment. I looked for various ways to make the artwork more unique. I decided to add small circles that would surround the cube, making it look like "stars" and add more detail. Lastly, I tried searching for code that would help create a gradient bacgkround from dark purple to black. The final artwork is shown below:
+## Final Details and Clever Aspects
+After creating this code, I felt like this was a bit too simple and too similar to my second assignment. I looked for various ways to make the artwork more unique. Lastly, as for clever aspects, I decided to add small circles that would surround the cube, making it look like "stars" and add more detail rather than just the cubes. I also tried finding code that would help me create a gradient bacgkround from dark purple to black. The final artwork is shown below:
 
 ![](images/finalsketch.png)
+
