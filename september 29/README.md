@@ -5,7 +5,11 @@ For this week, I wanted my artwork's concept to portray a sort of "galaxy" mixed
 ![alt-text](images/finalsketch.gif)
 
 ## Inspiration
-I at first, was inspired by the Coding Train's [ending screen](https://www.youtube.com/watch?v=o9sgjuh-CBM) shown at of their tutorial videos (minute 22:40). Because of this, I wanted to create a beach/sunset style artwork that would transition from day to night. However, when searching for ways on how to add glow to the sun, I came across this [Reddit post](https://www.reddit.com/r/processing/comments/d6kz2f/glow/) that showed various 3-dimensional cubes moving in different directions:
+I at first, was inspired by the Coding Train's [ending screen](https://www.youtube.com/watch?v=o9sgjuh-CBM) shown at of their tutorial videos (minute 22:40). Because of this, I wanted to create a beach/sunset style artwork that would transition from day to night.
+
+![](images/codingtrain.png)
+
+However, when searching for ways on how to add glow to the sun, I came across this [Reddit post](https://www.reddit.com/r/processing/comments/d6kz2f/glow/) that showed various 3-dimensional cubes moving in different directions:
 
 ![](images/reddit.png)
 
