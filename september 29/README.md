@@ -1,10 +1,10 @@
-![](september 29/images/onecube.png) ![](september8/twocubes.png)
+![](images/images/onecube.png) ![](images/twocubes.png)
 
-![](september 29/images/flowercube.png)
+![](images/images/flowercube.png)
 
-![](september 29/images/roughcube.png)
+![](images/images/roughcube.png)
 
-![](september 29/images/finalsketch.png)
+![](images/images/finalsketch.png)
 
 ![alt-text](images/finalsketch.gif)
  
