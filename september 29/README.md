@@ -1,4 +1,4 @@
-# Production Assignment 2: Processing Object-Oriented Programming
+# Production Assignment 3: Processing Object-Oriented Programming
 
 For this week, I wanted my artwork's concept to portray a sort of "galaxy" mixed with "futuristic" style, while also combining geometric shapes. My final animated artwork for this week is below:
 
