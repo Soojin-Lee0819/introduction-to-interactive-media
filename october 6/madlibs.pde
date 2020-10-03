@@ -1,23 +1,44 @@
-  Table table;
+Table table;
 
-  void setup() {
-    size(600, 600);
-    background(50, 100, 150);
-    fill(0, 0, 200);
-    textSize(20);
-    table = loadTable("madlibs.csv", "header");
+String[] verbs = new String[127]; 
+String[] bodyparts = new String[127];
+String[] nouns = new String[127];
+String[] adverbs = new String[127];
+String[] places = new String[127];
+String[] adjectives = new String[127];
+String[] celebs = new String[127];
+int n, a, v, c, zero;
 
-    for (TableRow row : table.rows()) {
-      String verbs = row.getString("verbs");
-      String bodyparts = row.getString("body parts");
-      String nouns = row.getString("nouns");
-      String adverbs = row.getString("adverbs");
-      String places = row.getString("places");
-      String adjectives = row.getString("adjectives");
-      String celebs = row.getString("celebs");
+void shuffle() {
+  n = int(random(nouns.length));
+  a = int(random(adjectives.length));
+  v = int(random(verbs.length));
+  c = int(random(celebs.length));
+  zero = 0;
+}
 
-      String[] verbsArray = new String[] {verbs}; 
-      int v = int(random(verbsArray.length)); 
-      println(verbsArray[v]);
-    }
-  }
+void setup() {
+  size(600, 600);
+  background(50, 100, 150);
+  fill(0, 0, 200);
+  textSize(20);
+  table = loadTable("madlibs.csv", "header");
+
+  verbs = table.getStringColumn("verbs");
+  bodyparts = table.getStringColumn("body parts");
+  nouns = table.getStringColumn("nouns");
+  adverbs = table.getStringColumn("adverbs");
+  places = table.getStringColumn("places");
+  adjectives = table.getStringColumn("adjectives");
+  celebs = table.getStringColumn("celebs");
+}
+
+void draw() {
+  background(200, 200, 0);
+  textAlign(CENTER, CENTER);
+  text("hello my name is " + verbs[v] + " nice to meet you", width/2, height/2);
+}
+
+void mousePressed() {
+  shuffle();
+}
