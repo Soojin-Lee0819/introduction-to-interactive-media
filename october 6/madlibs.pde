@@ -7,14 +7,13 @@ String[] adverbs = new String[127];
 String[] places = new String[127];
 String[] adjectives = new String[127];
 String[] celebs = new String[127];
-int n, a, v, c, zero;
+int n, a, v, c;
 
 void shuffle() {
   n = int(random(nouns.length));
   a = int(random(adjectives.length));
   v = int(random(verbs.length));
   c = int(random(celebs.length));
-  zero = 0;
 }
 
 void setup() {
