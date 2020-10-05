@@ -1,7 +1,13 @@
+//"Make Your Own Love Letter:" Madlibs Game
+//Katie Ferreol October 6 Assignment
+//Instructions: click to start, trash ideas until you find one you like, click letter stamp to send!
+
+//inputting all libraries
 Table table; 
 import processing.sound.*;
 SoundFile file;
 
+// creating all strings
 String[] verbs = new String[127]; 
 String[] bodyparts = new String[127];
 String[] nouns = new String[127];
@@ -10,6 +16,7 @@ String[] places = new String[127];
 String[] adjectives = new String[127];
 String[] celebs = new String[127];
 
+//creating all number variables
 int zero1 = 255;
 int zero2 = 255;
 int full = 0;
@@ -17,6 +24,7 @@ int number_of_presses = 0;
 int v1, v2, v3, v4, v5, v6, v7, b1, b2, b3, b4, b5, n1, n2, n3, n4, n5, av1, av2, av3, av4, 
   av5, p1, p2, p3, p4, p5, a1, a2, a3, a4, a5, a6, c1, c2, c3, c4, c5, m;
 
+//creating all aesthetic variables
 PImage bg;
 PImage trash;
 PImage cover;
@@ -25,10 +33,12 @@ PFont desc;
 PFont title;
 PFont start;
 
+//creating mousePressed() variable
 boolean trashClicked = false;
 
-
+//function to change word on click 
 void shuffle() {
+  //verbs
   v1 = int(random(verbs.length));
   v2 = int(random(verbs.length)); 
   v3 = int(random(verbs.length)); 
@@ -37,30 +47,35 @@ void shuffle() {
   v6 = int(random(verbs.length));
   v7 = int(random(verbs.length));
 
+  //body parts
   b1 = int(random(bodyparts.length));
   b2 = int(random(bodyparts.length));
   b3 = int(random(bodyparts.length));
   b4 = int(random(bodyparts.length));
   b5 = int(random(bodyparts.length));
 
+  //nouns
   n1 = int(random(nouns.length));
   n2 = int(random(nouns.length));
   n3 = int(random(nouns.length));
   n4 = int(random(nouns.length));
   n5 = int(random(nouns.length));
 
+  //adverbs
   av1 = int(random(adverbs.length));
   av2 = int(random(adverbs.length));
   av3 = int(random(adverbs.length));
   av4 = int(random(adverbs.length));
   av5 = int(random(adverbs.length));
 
+  //places
   p1 = int(random(places.length));
   p2 = int(random(places.length));
   p3 = int(random(places.length));
   p4 = int(random(places.length));
   p5 = int(random(places.length));
 
+  //adjectives
   a1 = int(random(adjectives.length));
   a2 = int(random(adjectives.length));
   a3 = int(random(adjectives.length));
@@ -68,22 +83,26 @@ void shuffle() {
   a5 = int(random(adjectives.length));
   a6 = int(random(adjectives.length));
 
+  //celebs
   c1 = int(random(celebs.length));
   c2 = int(random(celebs.length));
   c3 = int(random(celebs.length));
   c4 = int(random(celebs.length));
   c5 = int(random(celebs.length));
 
+  //money
   m = int(random(100000));
 }
 
 void setup() {
   size(800, 600);
 
+  //loading all fonts
   desc = createFont("210 GGothyangki R.ttf", 30);
   title = createFont("Sunday Morning.otf", 80);
   start = createFont("Brev Script.ttf", 130);
 
+  //turning strings to arrays
   table = loadTable("madlibs.csv", "header");
   verbs = table.getStringColumn("verbs");
   bodyparts = table.getStringColumn("body parts");
@@ -93,6 +112,7 @@ void setup() {
   adjectives = table.getStringColumn("adjectives");
   celebs = table.getStringColumn("celebs");
 
+  //loading all pictures
   cover = loadImage("cover.jpg");
   bg = loadImage("paper.jpg");
   trash = loadImage("trash.png");
@@ -101,15 +121,19 @@ void setup() {
 
 void draw() {
   textAlign(CENTER, CENTER);
+
+  //background image
   fill(200, 0, 0, zero2);
   background(bg);
   tint(255, zero2);
   image(trash, 50, 470, 130, 110);
 
+  //Attempt Number "N" at the top
   textSize(80);
   textFont(title);
   text("Attempt " + number_of_presses, width/2, 80);
 
+  //Text that changes prompt every time you click
   textSize(30);
   textFont(desc);
   if (trashClicked) {
@@ -120,13 +144,14 @@ void draw() {
       " and hold my " + adjectives[a6] + " " + bodyparts[b4] + ". I know a man with these " + nouns[n3] + " is hard to find. In fact, the only one I can think of is " + celebs[c3] + ".", 50, 20, 700, 580);
   } else {
     text("Dear " + celebs[c1] + ", It has come to my " + nouns[n1] + " that you are the most " + adjectives[a2] + " girl/boy in " + places[p1] + ". My " +
-      bodyparts[b1] + " starts " + verbs [v1] + " " + adverbs[av1] + " every time you speak. Ever since I have laid my " + bodyparts[b2] +
+      bodyparts[b1] + " starts to " + verbs [v1] + " " + adverbs[av1] + " every time you speak. Ever since I have laid my " + bodyparts[b2] +
       " on you, I have fallen madly in love with you. I wish that you will be the " + nouns[n2] + " of my " + nouns[n3] + " and that someday we will " +
       verbs[v2] + " happily ever after. I work as an assistant for " + celebs[c2] + " and I earn $" + m + " each month. I promise to " + 
       adverbs[av2] + " " + verbs[v3] + " you with kindness and respect. I would like to " + verbs[v4] + " if you want to go to " + places[p2] + " with me next weekend. If you " +
       verbs[v5] + ", please " + verbs[v6] + " me at " + places[p3] + " in 2 days. I " + verbs[v7] + " you and everything about you.", 50, 20, 700, 580);
   }
 
+  //cover page/starting page
   tint(255, zero1);
   image(cover, 0, 0, 800, 600);
   fill(200, 200, 0, zero1);
@@ -135,6 +160,7 @@ void draw() {
   text("Make Your Own", width/2, height/2-30);
   text("Love Letter!", width/2, height/2+90);
 
+  //ending page
   tint(255, full);
   image(envelope, 0, 0, 800, 600);
   fill(121, 95, 53, full);
@@ -147,6 +173,7 @@ void draw() {
 }
 
 void mousePressed() {
+  //if you click, change from cover page to letter page
   if (zero1 == 255) {
     zero1 = 0;
     file = new SoundFile(this, "flip.mp3");
@@ -154,6 +181,7 @@ void mousePressed() {
     shuffle();
   }
 
+  //if you click trash, change prompt & number of attempts
   if (mouseX >= 50 && mouseX <=130 && mouseY >= 475) {
     shuffle();
     number_of_presses = number_of_presses + 1;
@@ -162,6 +190,7 @@ void mousePressed() {
     trashClicked = ! trashClicked;
   }
 
+  //if you click stamp, change from letter page to ending page
   if (mouseX >= 620 && mouseY >= 475) {
     full = 255;
     zero2 = 0;
@@ -169,6 +198,7 @@ void mousePressed() {
     file.play();
   }
 
+  //if you click pen, change from end page to letter page if user wants to try again
   if (mouseX >= 50 && mouseX <=130 && mouseY >= 75) {
     full = 0;
     zero2 = 255;
