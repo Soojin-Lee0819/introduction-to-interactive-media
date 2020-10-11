@@ -1,17 +1,7 @@
-# introduction-to-interactive-media
-## two hashtags
-### three hashtags
-###### six hashtags
+# INTRODUCTION TO INTERACTIVE MEDIA
 
-this is one paragraph. these are some words.
+To whom it may concern,
 
-this is second paragraph. these are some words.
-this is still second paragraph. these are some words.
-this is still second paragraph. these are some words.
+Welcome to my Intro to IM portfolio! I hope you have a good time browsing through my works :)
 
-this is a [link](https://youtube.com)
-
-this is **bold**. this is *italicized*.
-
-here is an image:
-![](september8/schedule.png)
+- Katie
