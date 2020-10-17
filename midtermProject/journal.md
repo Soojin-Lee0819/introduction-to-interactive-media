@@ -6,11 +6,11 @@ For this midterm project, I decided to create a game inspired by the popular gro
 ## JOURNAL ENTRIES
 
 ### October 9
-I was super interested in it after watching Professor give us a tutorial in class. After looking at the website we were given in class for character sprites, I found a character sprite of the default player.
+I was super interested in it after watching Professor give us a tutorial in class. After looking at the website we were given in class for character sprites, I found a character sprite of the default player. I'm also not sure how to change the colors of the character through getting the color of the pixel and changing it.
 
 ![](images/charactersprite.png)
 
-After tinkering around with a code and searching tutorials on YouTube, I was able to get it to work properly. It now walks whenever the player presses the arrow keys. What I don't know how to do is to make the character turn when it moves left, right now it looks like it's moonwalking. I'm also not sure how to change the colors of the character through getting the color of the pixel and changing it.
+After tinkering around with a code and searching tutorials on YouTube, I was able to get it to work properly. It now walks whenever the player presses the arrow keys. What I don't know how to do is to make the character turn when it moves left, right now it looks like it's moonwalking.
 
 ![alt-text](images/walk.gif)
 
