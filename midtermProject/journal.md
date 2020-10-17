@@ -6,7 +6,7 @@ For this midterm project, I decided to create a game inspired by the popular gro
 ## JOURNAL ENTRIES
 
 ### October 9
-I was super interested in it after watching Professor give us a tutorial in class. After looking at the website we were given in class for character sprites, I found a character sprite of the default player. I'm also not sure how to change the colors of the character through getting the color of the pixel and changing it.
+I was super interested in it after watching Professor give us a tutorial in class. After looking at the website we were given in class for character sprites, I found a character sprite of the default player. I'm not sure how to change the colors of the character through Processing, so I might have to use Photoshop instead.
 
 ![](images/charactersprite.png)
 
