@@ -6,9 +6,11 @@ For this midterm project, I decided to create a game inspired by the popular gro
 ## JOURNAL ENTRIES
 
 ### October 9
-I was super interested in it after watching Professor give us a tutorial in class. After looking at the website we were given in class for character sprites, I found a character sprite of the default player. After tinkering around with a code and searching tutorials on YouTube, I was able to get it to work properly.
+I was super interested in it after watching Professor give us a tutorial in class. After looking at the website we were given in class for character sprites, I found a character sprite of the default player.
 
 ![](images/charactersprite.png)
+
+After tinkering around with a code and searching tutorials on YouTube, I was able to get it to work properly. It now walks whenever the player presses the arrow keys. What I don't know how to do is to make the character turn when it moves left, right now it looks like it's moonwalking.
 
 ![alt-text](images/walk.gif)
 
@@ -17,7 +19,7 @@ I was super interested in it after watching Professor give us a tutorial in clas
 --------------------
 
 ### October 14
-After finishing my October 13 assignment, I wanted to go back and work on this again, so I decided to add the killing animation early. Just using a simple mousePressed function on any part of the screen, I tested the killing animation and got it to work properly on one target before multiplying them to respawn. I also added a killing
+After finishing my October 13 assignment, I wanted to go back and work on this again, so I decided to add the killing animation early. It was a bit hard adding two character sprites, but I was able to do it. Just using a simple mousePressed function on any part of the screen, I tested the killing animation and got it to work properly on one target before multiplying them to respawn.
 
 ![alt-text](images/simplekill.gif)
 
@@ -26,7 +28,7 @@ After finishing my October 13 assignment, I wanted to go back and work on this a
 --------------------
 
 ### October 16
-I was able to make the target respawn, however I have some problems with letting the dying animation play all the way before respawning the character. I was also able to make the character look to the left when walking left using the transform function.
+I added a kill button, and made it so that the player clicks the button and not anywhere on the screen to kill the target. I also set restrictions so that the player has to be close to the target to kill it. I was able to make the target respawn, however I have some problems with letting the dying animation play all the way before respawning the character. I was also able to make the character look to the left when walking left using the transform function.
 
 ![alt-text](images/kill.gif)
 
