@@ -32,7 +32,7 @@ I was able to make the target respawn, however I have some problems with letting
 
 I was also able to add the background of the game by editing a photo of the actual game so there's no boxes around. 
 
-![](images/b.jpg)
+![](images/b.png)
 ![](images/bg.png)
 
 I also added a timer for the game to stop after 30 seconds, and a score function to count how many times the player kills their target.
