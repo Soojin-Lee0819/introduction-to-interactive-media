@@ -10,7 +10,7 @@ I was super interested in it after watching Professor give us a tutorial in clas
 
 ![](images/charactersprite.png)
 
-After tinkering around with a code and searching tutorials on YouTube, I was able to get it to work properly. It now walks whenever the player presses the arrow keys. What I don't know how to do is to make the character turn when it moves left, right now it looks like it's moonwalking.
+After tinkering around with a code and searching tutorials on YouTube, I was able to get it to work properly. It now walks whenever the player presses the arrow keys. What I don't know how to do is to make the character turn when it moves left, right now it looks like it's moonwalking. I'm also not sure how to change the colors of the character through getting the color of the pixel and changing it.
 
 ![alt-text](images/walk.gif)
 
