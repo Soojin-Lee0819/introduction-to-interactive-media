@@ -12,10 +12,14 @@ I was super interested in it after watching Professor give us a tutorial in clas
 
 ![alt-text](images/walk.gif)
 
+**WILL I CHANGE MY PROJECT?** I will not change my project since everything is going smoothly.
+
 ### October 14
 After finishing my October 13 assignment, I wanted to go back and work on this again, so I decided to add the killing animation early. Just using a simple mousePressed function on any part of the screen, I tested the killing animation and got it to work properly on one target before multiplying them to respawn. I also added a killing
 
 ![alt-text](images/simplekill.gif)
+
+**WILL I CHANGE MY PROJECT?** I will not change my project since everything is going smoothly.
 
 ### October 16
 I was able to make the target respawn, however I have some problems with letting the dying animation play all the way before respawning the character. I was also able to make the character look to the left when walking left using the transform function.
@@ -31,4 +35,5 @@ I also added a timer for the game to stop after 30 seconds, and a score function
 ![](images/timer.png)
 ![](images/score.png)
 
+**WILL I CHANGE MY PROJECT?** I made great progress on this project today, and I have not made a big decision to change my project since everything is going smoothly.
 
