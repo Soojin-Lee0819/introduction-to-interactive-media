@@ -23,11 +23,16 @@ Killing sequence
 
 ### October 16
 - made target respawn
-- added background
-- added timer
 
 ![alt-text](images/kill.gif)
+
+- added background
+
 ![](images/bg.png)
+
+- added timer and score
+
 ![](images/timer.png)
+![](images/score.png)
 
 
