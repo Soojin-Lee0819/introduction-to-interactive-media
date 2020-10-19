@@ -1,4 +1,4 @@
-# Production Assignment 5: Processing Image Manipulation
+# Production Midterm: Processing Game
 
 ## DESCRIPTION
 For this midterm project, I decided to create a game inspired by the popular group game at the moment, [Among Us](http://www.innersloth.com/gameAmongUs.php). This has become my favorite game over these past few months for the cute characters. My game entails having to run up to spawning targets and killing them before the timer runs out.
