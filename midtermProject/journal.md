@@ -73,6 +73,6 @@ Seeing that I wanted to make the player and the target distinct using more than 
 ![](images/spooki.png)
 ![](images/target.png)
 
-Putting everything together, I finally finished the game. The full run through, including replaying the game, is below:
+Putting everything together, I finally finished the game. The full run through, including replaying the game, is below (I made the gif in 2X speed since it's a long game and could not fit in a gif in normal speed):
 
 ![alt-text](images/full.gif)
