@@ -49,11 +49,13 @@ I also added a timer for the game to stop after 30 seconds, and a score function
 ### DAY 4: October 23
 I began to add the starting page, which I had edited using Photoshop. Using restrictions for the mousePressed() function, I made it so that it looked like when the player pressed the "button" or a specific part of the screen, it will show the instructions or start the game. I used a rect() function for the instructions. I also wanted the starting page to fade out slowly with the entrance music, which proved to be more difficult than I expected since the timer wouldn't start at 30, but at 26. After some time, I was able to make it work. I created a specific void for the fade out to put in the draw() function, since the function will only play once if it's in the mousePressed() function. This code is below:
 
+
 void down() {
   if (startopacity < 255) {
     startopacity = startopacity - 10;
   }
 }
+
 
 ![](images/startingpage.png)
 
@@ -66,6 +68,7 @@ I had also tried to solve my problem of the target disappearing before the full 
 ### DAY 5: October 24
 I was finally able to properly code the target so it plays the killing animation fully before respawning in a different location. This marked the end of my full coding process, leading me to have only the proper coloring of the characters left to do. What I had to do was restart the image array of the target to 0 once it reaches 14. This corrected code is below:
 
+
 void spawnNew() {
   if (die == 0) {
     full3 = 0;
@@ -77,6 +80,7 @@ void spawnNew() {
     }
   }
 }
+
 
 ![alt-text](images/properkill.gif)
 
