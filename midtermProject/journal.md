@@ -57,7 +57,7 @@ I had also tried to solve my problem of the target disappearing before the full 
 
 --------------------
 
-October 24
+### October 24
 I was finally able to properly code the target so it plays the killing animation fully before respawning in a different location. This marked the end of my full coding process, leading me to have only the proper coloring of the characters left to do. I was also able to make the game restart after the timer finishes.
 
 ![alt-text](images/properkill.gif)
