@@ -75,4 +75,4 @@ Seeing that I wanted to make the player and the target distinct using more than 
 
 Putting everything together, I finally finished the game. The full run through, including replaying the game, is below:
 
-![alt-text](images/fullrunthrough.gif)
+![alt-tet](images/fullrunthrough.gif)
