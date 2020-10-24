@@ -45,15 +45,34 @@ I also added a timer for the game to stop after 30 seconds, and a score function
 **WILL I CHANGE MY PROJECT?** I made great progress on this project today, and I have not made a big decision to change my project since everything is going smoothly.
 
 --------------------
-October 23
+
+### October 23
+I began to add the starting page, which I had edited using Photoshop. Using restrictions for the mousePressed() function, I made it so that it looked like when the player pressed the "button" or a specific part of the screen, it will show the instructions or start the game. I used a rect() function for the instructions. I also wanted the starting page to fade out slowly with the entrance music, which proved to be more difficult than I expected since the timer wouldn't start at 30, but at 26. After some time, I was able to make it work.
+
 ![](images/startingpage.png)
 
+I had also tried to solve my problem of the target disappearing before the full death animation played, but I could not find out how to do it. I decided to save it for the next day.
+
+**WILL I CHANGE MY PROJECT?** I will not change my project since everything is going smoothly.
+
+--------------------
+
 October 24
+I was finally able to properly code the target so it plays the killing animation fully before respawning in a different location. This marked the end of my full coding process, leading me to have only the proper coloring of the characters left to do. I was also able to make the game restart after the timer finishes.
+
 ![alt-text](images/properkill.gif)
-![alt-text](images/fullrunthrough.gif)
+
+After finalizing all my coding, I used Photoshop to recolor the character sprites according to their role in the game. Since I could not solve my problem of changing the sprites' color in Processing itself, I decided to manually change each sprite's color--orange for the player, pink for the target.
 
 ![](images/orangesprite.png)
+
 ![](images/pinksprite.png)
+
+Seeing that I wanted to make the player and the target distinct using more than just their colors, I used the extra hats given by the provider of the character sprite to give them a pumpkin hat and a massacre mask for a Halloween theme.
 
 ![](images/spooki.png)
 ![](images/target.png)
+
+Putting everything together, I finally finished the game. The full run through, including replaying the game, is below:
+
+![alt-text](images/fullrunthrough.gif)
