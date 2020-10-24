@@ -45,4 +45,13 @@ I also added a timer for the game to stop after 30 seconds, and a score function
 **WILL I CHANGE MY PROJECT?** I made great progress on this project today, and I have not made a big decision to change my project since everything is going smoothly.
 
 --------------------
+![](images/startingpage.png)
 
+![alt-text](images/properkill.gif)
+![alt-text](images/fullrunthrough.gif)
+
+![](images/orangesprite.png)
+![](images/pinksprite.png)
+
+![](images/spooki.png)
+![](images/target.png)
