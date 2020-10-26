@@ -1,50 +1,118 @@
+//Katie Ferreol Midterm Project
+//TITLE: AMONG US MINI GAME EDITION
+//INSTRUCTIONS: Use the arrow keys to move, and press the kill button to kill the target.
+// You have 30 seconds to kill as many as possible.
+
+//declaring all sounds
 import processing.sound.*;
+SoundFile start;
 SoundFile walk;
 SoundFile kill;
-SoundFile start;
 SoundFile end;
 
+//declaring fonts
 PFont name;
 PFont title;
 
+//declaring photo arrays
 PImage[] walks = new PImage[12];
 PImage[] deads = new PImage[15];
-PImage startingscreen;
+
+//declaring photos
 PImage bg;
-PImage still;
-PImage still2;
 PImage deadfloor;
 PImage hat;
 PImage hat2;
 PImage killbutton;
+PImage startingscreen;
+PImage still;
+PImage still2;
 
+//declaring all variables
+int countDown = 0;
+int countDownStart = 30;
+int die = 0;
 int face = 0;
-int step = 0;
 int fall = 0;
-int x = 350;
-int y = 200;
-int randomx = int(random(300, 600));
-int randomy = int(random(300, 600));
 int full1;
 int full2;
 int full3;
 int full4;
-int startopacity = 255;
 int instructionopacity = 0;
-int speed = 4;
+int randomx = int(random(300, 600));
+int randomy = int(random(300, 600));
 int score = 0;
+int speed = 4;
 int startoff = 0;
-
-int countDown = 0;
-int countDownStart = 30;
-int timerStart = 0;
+int startopacity = 255;
+int step = 0;
 int timer = 0;
+int timerStart = 0;
+int x = 350;
+int y = 200;
 
+//declaring boolean
 boolean stills = false;
-int die = 0;
 
+//STARTING SCREEN
+void startingscreen() {
+  tint(255, startopacity);
+  image (startingscreen, 0, 0);
+}
+
+//INSTRUCTION SCREEN
+void instructionscreen() {
+  fill(255, instructionopacity);
+  noStroke();
+  rect(50, 50, 700, 700);
+  fill(0, instructionopacity);
+  textFont(name);
+  textSize(30);
+  text("This project is a modern spin on the Among Us game we all know and love. Instructions are simple: move to the target and kill them!", 80, 110, 600, 600);
+  text("CONTROLS: Use the arrow keys to move. Your targets are the pink crewmates wearing the scary ski masks. To kill, press the KILL button on the lower right. You have 30 seconds to kill as many targets as possible.", 80, 310, 600, 600);
+  text("That's it! I hope you enjoy this game, and GOOD LUCK!", 80, 570, 600, 600);
+  text("(press the P key to start the game.)", 80, 690, 600, 600);
+}
+
+//fadeout starting screen
+void down() {
+  if (startopacity < 255) {
+    startopacity = startopacity - 10;
+  }
+}
+
+//30 second timer
+void timer() {
+  if (startopacity <= 0) {
+    timer = int(millis()/ 1000 - timerStart);
+    countDown = int(countDownStart - timer);
+  }
+  if (countDown == 2) {
+    end.loop();
+  }
+  if (countDown < 0) {
+    countDown = 0;
+    end.stop();
+    pushMatrix();
+    //add new background so characters aren't seen
+    image(bg, 0, 0);
+    pushMatrix();
+    tint(0, 147);
+    image(bg, 0, 0);
+    popMatrix();
+    textSize(100);
+    text("TIME'S UP!", 200, 400);
+    text("SCORE: " + score, 235, 500);
+    textSize(30);
+    text("Replay? PRESS THE 'P' BUTTON!", 230, 550);
+    walk.stop();
+    kill.stop();
+    popMatrix();
+  }
+}
+
+//using arrow keys to move
 void movePlayer() {
-  //impostor moving
   if (keyPressed) {
     face = 0;
     full1 = 0;
@@ -75,6 +143,7 @@ void movePlayer() {
         y+=speed;
       }
     }
+    //flip array horizontally when facing left
     if (face == 1) {
       pushMatrix();
       translate(x, y);
@@ -115,6 +184,7 @@ void movePlayer() {
   }
 }
 
+//changing opacity to play killing animation
 void killing() {
   if (die == 1) {
     full3 = 255;
@@ -123,6 +193,7 @@ void killing() {
   }
 }
 
+//killing and respawning
 void killanimation() {
   tint(255, full3);
   image(deads[fall], randomx, randomy);
@@ -133,6 +204,7 @@ void killanimation() {
   }
 }
 
+//spawns target in new location
 void spawnNew() {
   if (die == 0) {
     full3 = 0;
@@ -145,58 +217,7 @@ void spawnNew() {
   }
 }
 
-void timer() {
-  if (startopacity <= 0) {
-    timer = int(millis()/ 1000 - timerStart);
-    countDown = int(countDownStart - timer);
-  }
-  if (countDown == 2) {
-    end.loop();
-  }
-  if (countDown < 0) {
-    countDown = 0;
-    end.stop();
-    pushMatrix();
-    image(bg, 0, 0);
-    pushMatrix();
-    tint(0, 147);
-    image(bg, 0, 0);
-    popMatrix();
-    textSize(100);
-    text("TIME'S UP!", 200, 400);
-    text("SCORE: " + score, 235, 500);
-    textSize(30);
-    text("Replay? PRESS THE 'P' BUTTON!", 230, 550);
-    walk.stop();
-    kill.stop();
-    popMatrix();
-  }
-}
-
-void startingscreen() {
-  tint(255, startopacity);
-  image (startingscreen, 0, 0);
-}
-
-void instructionscreen() {
-  fill(255, instructionopacity);
-  noStroke();
-  rect(50, 50, 700, 700);
-  fill(0, instructionopacity);
-  textFont(name);
-  textSize(30);
-  text("This project is a modern spin on the Among Us game we all know and love. Instructions are simple: move to the target and kill them!", 80, 110, 600, 600);
-  text("CONTROLS: Use the arrow keys to move. Your targets are the pink crewmates wearing the scary ski masks. To kill, press the KILL button on the lower right. You have 30 seconds to kill as many targets as possible.", 80, 310, 600, 600);
-  text("That's it! I hope you enjoy this game, and GOOD LUCK!", 80, 570, 600, 600);
-  text("(press the P key to start the game.)", 80, 690, 600, 600);
-}
-
-void down() {
-  if (startopacity < 255) {
-    startopacity = startopacity - 10;
-  }
-}
-
+//restarting game when P is pressed
 void restart() {
   if (keyPressed) {
     if (key == 'p' || key == 'P') {
@@ -214,40 +235,49 @@ void restart() {
 void setup() {
   size(800, 800);
 
+  //setting size of fonts
   name = createFont("Gotham-Medium.otf", 15);
   title = createFont("Sunday Morning copy.otf", 50);
 
+  //setting arrays for player
   for ( int i = 0; i < walks.length; i++ ) {
     walks[i] = loadImage("walk" + i + ".png" );
   }
 
+  //setting arrays for target
   for ( int i = 0; i < deads.length; i++ ) {
     deads[i] = loadImage("dead" + i + ".png" );
   }
 
+  //setting countdown
   countDown  = countDownStart;
 
+  //importing all photos
   frameRate(30);
-  still = loadImage("walk12.png");
-  still2 = loadImage("walk13.png");
+  bg = loadImage("bg.jpg");
   deadfloor = loadImage("dead14.png");
   hat = loadImage("hat.png");
   hat2 = loadImage("hat2.png");
   killbutton = loadImage("killbutton.png");
-  walk = new SoundFile(this, "walk.mp3");
+  startingscreen = loadImage("startingscreen.jpg");
+  still = loadImage("walk12.png");
+  still2 = loadImage("walk13.png");
+  
+  //importing all sounds
+  end = new SoundFile(this, "end.mp3");
   kill = new SoundFile(this, "kill.mp3");
   start = new SoundFile(this, "start.mp3");
-  end = new SoundFile(this, "end.mp3");
-  bg = loadImage("bg.jpg");
-  startingscreen = loadImage("startingscreen.jpg");
+  walk = new SoundFile(this, "walk.mp3");
 }
 
 void draw() {
   background(bg);
 
+  //respawn target at random location
   tint(255, full4);
   image(still2, randomx, randomy);
 
+  //target's mask
   tint(255, full4);
   image(hat2, randomx+7, randomy-6);
 
@@ -256,16 +286,20 @@ void draw() {
   killanimation();
   spawnNew();
 
+  //name on top of player
   fill(255);
   textFont(name);
   text("spooki", x+20, y-40);
 
+  //player's score
   textFont(title);
   text("Score: " + score, 600, 80);
 
+  //killing button
   tint(255, 255);
   image(killbutton, 650, 650);
 
+  //timer text
   textFont(title);
   text("Time left: " + countDown, 10, 80);
 
@@ -277,6 +311,7 @@ void draw() {
 }
 
 void mousePressed() {
+  //if the player starts the game, it starts down the timer and fades out
   if (mouseX > 255 && mouseX < 530 && mouseY > 485 && mouseY < 540) {
     startopacity = 254;
     instructionopacity = 0;
@@ -284,10 +319,12 @@ void mousePressed() {
     timerStart = millis() / 1000;
   }
 
+  //if the player clicks instructions, instruction screen appears
   if (mouseX > 215 && mouseX < 565 && mouseY > 350 && mouseY < 430) {
     instructionopacity = 255;
   }
 
+  //when player kills target, it will increase score
   if (mouseX > 650 && mouseX < 750 && mouseY > 670 && mouseY < 750 && dist(x, y, randomx, randomy) < 100 && countDown != 0) { 
     die = 1;
     score += 1;
