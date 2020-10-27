@@ -3,6 +3,41 @@
 //INSTRUCTIONS: Use the arrow keys to move, and press the kill button to kill the target.
 // You have 30 seconds to kill as many as possible.
 
+//star class to add animation in starting screen
+class Star {
+  float x = random(-800, -50);
+  float y = random(height);
+  float xspeed = random(5, 10);
+  float l = random(10, 20);
+  int startopacity = 255;
+
+  //makes stars move from left to right
+  void fall() {
+    x = x + xspeed;
+    if (x > width) {
+      x = random(-800, -100);
+    }
+  }
+
+  //makes stars appear or disappear
+  void show() {
+    //using ellipse
+    fill(255, startopacity);
+    ellipse(x, y, 10, 10);
+  }
+
+  //disappears if start or P is pressed
+  void mousePressed() {
+    //if the player starts the game, it starts down the timer and fades out
+    if (mouseX > 255 && mouseX < 530 && mouseY > 485 && mouseY < 540 || keyPressed) {
+      if (key == 'p' || key == 'P') {
+        startopacity = 0;
+      }
+    }
+  }
+}
+//end of star class
+
 //declaring all sounds
 import processing.sound.*;
 SoundFile start;
@@ -64,6 +99,7 @@ void startingscreen() {
 void instructionscreen() {
   fill(255, instructionopacity);
   noStroke();
+  //using rectangle
   rect(50, 50, 700, 700);
   fill(0, instructionopacity);
   textFont(name);
@@ -232,6 +268,8 @@ void restart() {
   }
 }
 
+Star[] stars = new Star [10];
+
 void setup() {
   size(800, 800);
 
@@ -262,12 +300,17 @@ void setup() {
   startingscreen = loadImage("startingscreen.jpg");
   still = loadImage("walk12.png");
   still2 = loadImage("walk13.png");
-  
+
   //importing all sounds
   end = new SoundFile(this, "end.mp3");
   kill = new SoundFile(this, "kill.mp3");
   start = new SoundFile(this, "start.mp3");
   walk = new SoundFile(this, "walk.mp3");
+
+  //adding stars
+  for (int i = 0; i < stars.length; i++) {
+    stars[i] = new Star();
+  }
 }
 
 void draw() {
@@ -305,6 +348,14 @@ void draw() {
 
   timer();
   startingscreen();
+
+  //adding stars
+  for (int i = 0; i < stars.length; i++) {
+    stars[i].fall();
+    stars[i].show();
+    stars[i].mousePressed();
+  }
+
   instructionscreen();
   restart();
   down();
