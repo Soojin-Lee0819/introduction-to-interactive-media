@@ -96,3 +96,11 @@ Seeing that I wanted to make the player and the target distinct using more than 
 Putting everything together, I finally finished the game. The full run through, including replaying the game, is below (I made the gif in 2X speed since it's a long game and could not fit in a gif in normal speed):
 
 ![alt-text](images/full.gif)
+
+--------------------
+
+### DAY 6: October 27
+
+After looking at my project one last time, I realized that I did not add many in-code shapes, only using a rectangle for the instruction screen. Deciding to add more shapes using Processing, I decided to make a moving star class using ellipses to add an animated feeling to the starting screen.
+
+![alt-text](images/star.gif)
