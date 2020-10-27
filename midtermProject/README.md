@@ -17,6 +17,6 @@ You use the arrow keys to move closer to the target, after you are close enough,
 
 ![alt-text](images/properkill.gif)
 
-After the 30 seconds, you are met with a screen that shows you time is up and your score. If you want to play again, simply press P, and it will reset the timer and your score. Putting everything together, I finally finished the game today. The full run through, including replaying the game, is below (I made the gif in 2X speed since it's a long game and could not fit in a gif in normal speed):
+After the 30 seconds, you are met with a screen that shows you time is up and your score. If you want to play again, simply press P, and it will reset the timer and your score. Putting everything together, I finally finished the game today. The full run through, including replaying the game and without sound, is below (I made the gif in 2X speed since it's a long game and could not fit in a gif in normal speed):
 
 ![alt-text](images/full.gif)
