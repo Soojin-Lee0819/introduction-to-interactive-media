@@ -4,7 +4,7 @@
 For this midterm project, I decided to create a game inspired by the popular group game at the moment, [Among Us](http://www.innersloth.com/gameAmongUs.php). This has become my favorite game over these past few months for the cute characters. My game entails having to run up to spawning targets and killing them before the timer runs out. Since I put a run down of every day in my journal, I will give a brief summary on this README file.
 
 ## INSTRUCTIONS
-When you load the file, you are met with the startingrting screen. I used an array of circles that move from left to right to give the appearance of stars. You are given the choice to either start the game, or be given a list of instructions first.
+When you load the file, you are met with the starting screen. I used an array of circles that move from left to right to give the appearance of stars. You are given the choice to either start the game, or be given a list of instructions first.
 
 ![alt-text](images/stars.gif)
 
