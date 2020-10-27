@@ -29,10 +29,13 @@ class Star {
   //disappears if start or P is pressed
   void mousePressed() {
     //if the player starts the game, it starts down the timer and fades out
-    if (mouseX > 255 && mouseX < 530 && mouseY > 485 && mouseY < 540 || keyPressed) {
-      if (key == 'p' || key == 'P') {
+    if (mouseX > 255 && mouseX < 530 && mouseY > 485 && mouseY < 540) {
         startopacity = 0;
-      }
+    }
+    if (keyPressed) {
+       if (key == 'p' || key == 'P') {
+         startopacity = 0;
+       }
     }
   }
 }
