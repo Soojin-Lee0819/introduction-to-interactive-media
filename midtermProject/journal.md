@@ -47,7 +47,7 @@ I also added a timer for the game to stop after 30 seconds, and a score function
 --------------------
 
 ### DAY 4: October 23
-I began to add the starting page, which I had edited using Photoshop. Using restrictions for the mousePressed() function, I made it so that it looked like when the player pressed the "button" or a specific part of the screen, it will show the instructions or start the game. I used a rect() function for the instructions.
+I began to add the starting page, which I had edited using Photoshop. Using restrictions for the mousePressed() function, I made it so that it looked like when the player pressed the "button" or a specific part of the screen, it will show the instructions or start the game. A starting sound will play when the user clicks. I used a rect() function for the instructions.
 
 ![](images/startingpage.png)
 
@@ -93,7 +93,7 @@ Seeing that I wanted to make the player and the target distinct using more than 
 ![](images/spooki.png)
 ![](images/target.png)
 
-Putting everything together, I finally finished the game. The full run through, including replaying the game, is below (I made the gif in 2X speed since it's a long game and could not fit in a gif in normal speed):
+Putting everything together, I finally finished the game. The full run through, including replaying the game and without sound, is below (I made the gif in 2X speed since it's a long game and could not fit in a gif in normal speed):
 
 ![alt-text](images/full.gif)
 
