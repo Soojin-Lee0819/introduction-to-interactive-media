@@ -103,4 +103,4 @@ Putting everything together, I finally finished the game. The full run through, 
 
 After looking at my project one last time, I realized that I did not add many in-code shapes, only using a rectangle for the instruction screen. Deciding to add more shapes using Processing, I decided to make a moving star class using ellipses to add an animated feeling to the starting screen.
 
-![alt-text](images/star.gif)
+![alt-text](images/stars.gif)
