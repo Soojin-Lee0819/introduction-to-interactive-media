@@ -1,4 +1,4 @@
-![alt-text](images/fullgame.gif)
+![alt-text](images/finalgame.gif)
 ![alt-text](images/firstbuild.gif)
 ![](images/messygame.png)
 ![](images/cleangame.png)
