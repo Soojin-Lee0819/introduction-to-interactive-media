@@ -28,6 +28,6 @@ However, the next setback I experienced was the programming aspect of the game. 
 However, I was able to realize that you did not technically need C/C++, as the game can run on majority Processing language alone. Even through this, I was able to recognize new parts of Processing that I did not know before, such as the "break" command, the "long" variable, and also the "do, while" function.
 
 ## Final Game
-The final runthrough of the game (disregard the buzzer) is below:
+The final runthrough of the game (in 3x speed since gif's can only be no more than 30 seconds) is below. Please disregard the buzzer:
 
 ![alt-text](images/finalgame.gif)
