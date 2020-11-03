@@ -1,5 +1,5 @@
 # Arduino Assignment 1: LED Game
-This week's assignment involved using Arduino switches/buttons and LED lights to create a puzzle game. Through looking at tutorials and using what we learned in class, I decided to make a game that involved memorizing a pattern given by the Arduino program.
+This week's assignment involved using Arduino switches/buttons and LED lights to create a puzzle game. Through looking at tutorials and using what we learned in class, I decided to make a game that involved memorizing a pattern given by the Arduino program. If you are able to get through 7 rounds, you win! However, you should press the pattern before 2 seconds runs out, or that is a game over.
 
 ## Schematic
 The build of the final schematic is below. This build involves connecting all button and LED wires from the digital pins to one side of the breadboard. This then connects all of the wires to one main GND wire, which is what powers it all up.
