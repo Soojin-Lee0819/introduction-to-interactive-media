@@ -30,5 +30,5 @@ However, I was able to realize that you did not technically need C/C++, as the g
 The final runthrough of the game (in 3x speed since gif's can only be no more than 30 seconds) is below. Please disregard the buzzer. As shown in this playthrough, you press any button to start the game, and all LED's will blink fast 3 times to indicate that game is starting. The game will then pick out a random LED for you to press, and will add more as you go. If you fail, all LED's will light up, going back to the initial start of the game. If you win, the LED's will blink fast once again.
 
 ![alt-text](images/finalgame.gif)
-[Link]https://vimeo.com/477128172
+[Link](https://vimeo.com/477128172)
 
