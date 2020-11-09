@@ -9,8 +9,7 @@ The build of the final schematic is below, which I made through a combination of
 ## First Build and Setbacks
 At first, I wanted to make use of the photo resistor, which was the first analog sensor that we learned how to use in class. It was going fairly well, with the code working the way I had hoped. I was actually stuck because my LED's were less bright than usual, but I figured out after a while that I was using the wrong resistor! _It's crazy to think how such a small mistake can make a big difference._
 
-![alt-text](images/photoresistor.gif)
-![](images/trial1.png)
+![alt-text](images/photoresistor.gif) ![](images/trial1.png)
 
 In the gif above, the program shows a red LED if it's not covered by my finger, as the photoresistor is reading higher levels of light. Then, when I cover it with my finger, the levels drastically go down, triggering the code to light up the blue LED and turn off the red LED.
 
