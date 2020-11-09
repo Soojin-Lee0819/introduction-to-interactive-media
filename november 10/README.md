@@ -1,4 +1,4 @@
-# Arduino Assignment 1: LED Game
+# Arduino Assignment 1: Analog VS. Digital
 This week's assignment involved using Arduino switches/buttons and LED lights to create a puzzle game. Through looking at tutorials and using what we learned in class, I decided to make a game that involved memorizing a pattern given by the Arduino program. If you are able to get through 7 rounds, you win! However, you should press the pattern before 2 seconds runs out, or that is a game over.
 
 ## Schematic
