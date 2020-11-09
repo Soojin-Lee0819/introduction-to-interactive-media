@@ -1,34 +1,46 @@
 # Arduino Assignment 1: Analog VS. Digital
-This week's assignment involved using Arduino switches/buttons and LED lights to create a puzzle game. Through looking at tutorials and using what we learned in class, I decided to make a game that involved memorizing a pattern given by the Arduino program. If you are able to get through 7 rounds, you win! However, you should press the pattern before 2 seconds runs out, or that is a game over.
+This week's assignment involved using Arduino to determine the difference between digital and analog reading and writing. For analog, there is a potentiometer on the left that makes turns on a specific LED depending on the value you turn it to, and for digital, there is a button that, when pressed, will turn all the lights off except for the one chosen by the potentiometer. It can turn into a fun game to play with friends to guess which light will be one after pressing the button.
 
 ## Schematic
 The build of the final schematic is below, which I made through a combination of drawing and Photoshop. This build involves connecting all button and LED wires from the digital pins to one side of the breadboard. This then connects all of the wires to one main GND wire, which is what powers it all up.
 
-![alt-text](images/photoresistor.gif)
+![](images/schematic.png)
 
 ## First Build and Setbacks
-At first, I believed that I would be able to build this program using only the knowledge we learned in class. However, this proved to be quite challenging, as we were taught to only put the LED's in a specific way on the breadboard, not making it visible to the future player.
+At first, I wanted to make use of the photo resistor, which was the first analog sensor that we learned how to use in class. It was going fairly well, with the code working the way I had hoped. I was actually stuck because my LED's were less bright than usual, but I figured out after a while that I was using the wrong resistor! _It's crazy to think how such a small mistake can make a big difference._
+
+![alt-text](images/photoresistor.gif)
+
+In the gif above, the program shows a red LED if it's not covered by my finger, as the photoresistor is reading higher levels of light. Then, when I cover it with my finger, the levels drastically go down, triggering the code to light up the blue LED and turn off the red LED.
+
+    int sensorValue = analogRead (A2);
+      Serial.println(sensorValue);
+
+      if (sensorValue > 600) {
+     analogWrite (redLEDPin, 100);
+     analogWrite (blueLEDPin, 0);
+     } else {
+     analogWrite (redLEDPin, 0);
+     analogWrite (blueLEDPin, 100);
+     }
+
+However, though this was going well, I wanted a more fixed value with my serial readings, and I didn't think a photo resistor could provide me with that. Because it reads light, my code might work and not work depending on the environment I'm in. With this being said, I chose to switch to the potentiometer, which gives clearer, fixed values.
 
 ![alt-text](images/potentiometer.gif)
 
-In addition, because I did not know that you could connect wires on the breadboard itself instead of constantly connecting it to different GND pins, I made use of more wires than needed, making it look messier than expected. You can see from the gif below that I was struggling getting my finger inside the tight space of where the buttons were to activate the LED.
-
 ![](images/trial1.png)
 
-With this being said, I decided to look at various tutorials and walkthroughs of how to properly position these parts of the build.
-
 ## Second Build and Setbacks
-This trial was definitely more organized and I knew more of what was going on rather than blindly follow and hope that it would work. My build now had the colored LED's and its corresponding color button next to each other, with the wires behind instead of around them. This makes it easier for the player to access. I wanted to add a buzzer, however, I decided to withdraw it as I could not get it to work. 
+My second build, visually, looked very similar to my first project, as I decided to make use of four LED's instead of just two to prove the potentiometer's purpose more. My new build, as it has more fixed values, programs my Arduino so that, when the value is between 200 to 400, it turns on the red LED, if it's between 400 to 600, it turns on the blue LED, if it's between 600 to 800, it turns on the yellow LED, and if it's greater than 800, it turns on the green LED.
 
 ![](images/trial2.png)
 
-However, the next setback I experienced was the programming aspect of the game. Because I have never learned C or C++ before, some of the parts of coding were quite difficult to follow on just self-teaching, especially since most of the tutorials I found were very heavy on using C/C++, such as using #define and other parts.
-
-However, I was able to realize that you did not technically need C/C++, as the game can run on majority Processing language alone. Even through this, I was able to recognize new parts of Processing that I did not know before, such as the "break" command, the "long" variable, and also the "do, while" function.
+My problem with this build was actually a bug with Arduino: I wanted to use multiple if statements for one function using "&&", however it wasn't allowing me to upload the program. Confused, I tried googling what was wrong and I was doing everything right. However, after researching the error, I realized I just had to connect and disconnect my Arduino board and it worked again. _Very strange._
 
 ## Final Game
-The final runthrough of the game (in 3x speed since gif's can only be no more than 30 seconds) is below. Please disregard the buzzer. As shown in this playthrough, you press any button to start the game, and all LED's will blink fast 3 times to indicate that game is starting. The game will then pick out a random LED for you to press, and will add more as you go. If you fail, all LED's will light up, going back to the initial start of the game. If you win, the LED's will blink fast once again.
+The final runthrough of the game (in 2x speed since gif's can only be no more than 30 seconds) is below. As shown in this playthrough, all LED's start off on, then when you press the button, it digitally writes for all of them to turn off. However, since it's below my analog reads, it leaves the one the potentiometer turns on lit up. To change which LED is lit up, twist around the potentiometer to your preferred LED. This can turn into a fun game to play with friends to guess which light will be one after pressing the button.
 
 ![alt-text](images/finalgame.gif)
-[Link](https://vimeo.com/477128172)
+
+[The link to my program and build is in this line of text!](https://vimeo.com/477128172)
 
