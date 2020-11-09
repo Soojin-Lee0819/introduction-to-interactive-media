@@ -1,6 +1,8 @@
 # Arduino Assignment 1: Analog VS. Digital
 This week's assignment involved using Arduino to determine the difference between digital and analog reading and writing. For analog, there is a potentiometer on the left that makes turns on a specific LED depending on the value you turn it to, and for digital, there is a button that, when pressed, will turn all the lights off except for the one chosen by the potentiometer. It can turn into a fun game to play with friends to guess which light will be one after pressing the button.
 
+[The link to the full video is here!](https://vimeo.com/477128172)
+
 ## Schematic
 The build of the final schematic is below, which I made through a combination of drawing and Photoshop. This build involves connecting all button and LED wires from the digital pins to one side of the breadboard. This then connects all of the wires to one main GND wire, which is what powers it all up.
 
@@ -41,6 +43,4 @@ My problem with this build was actually a bug with Arduino: I wanted to use mult
 The final runthrough of the game (in 2x speed since gif's can only be no more than 30 seconds) is below. As shown in this playthrough, all LED's start off on, then when you press the button, it digitally writes for all of them to turn off. However, since it's below my analog reads, it leaves the one the potentiometer turns on lit up. To change which LED is lit up, twist around the potentiometer to your preferred LED. This can turn into a fun game to play with friends to guess which light will be one after pressing the button.
 
 ![alt-text](images/finalgame.gif)
-
-[The link to my program and build is in this line of text!](https://vimeo.com/477128172)
 
