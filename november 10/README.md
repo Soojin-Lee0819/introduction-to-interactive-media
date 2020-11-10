@@ -44,3 +44,10 @@ The final runthrough of the game (in 2x speed since gif's can only be no more th
 
 ![alt-text](images/finalgame.gif)
 
+## Interesting Things I Discovered
+
+Because I added the button to the code and the circuit last, I was intrigued to see that the button was actually performing the opposite of what the code is saying: even though I wrote in the code that the LED's should be on HIGH when the button state was HIGH, it did the opposite. I believe that this is due to the order of my if statements, as the code is prioritizing the potentiometer becomes it comes first. Curious, I then tried to put the if statement for the button first, which led to the three LED's blinking rapidly in low light (shown in the gif below):
+
+![alt-text](images/codeorder.gif)
+
+I think this showed me the importance of code order.
