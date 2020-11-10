@@ -4,7 +4,7 @@ This week's assignment involved using Arduino to determine the difference betwee
 [The link to the full video is here!](https://vimeo.com/477128172)
 
 ## Schematic
-The build of the final schematic is below, which I made through a combination of drawing and Photoshop. This build involves connecting all button and LED wires from the digital pins to one side of the breadboard. This then connects all of the wires to one main GND wire, which is what powers it all up.
+The build of the final schematic is below, which I made through a combination of drawing and Photoshop. I had a much easier time making this schematic after following Profesor Shiloh's example in class. I'm curious though because he mentions that input and output should be in different sides of the Arduino board, however, from all the schematics I've seen, the button (which I assume is an input) is on the right with the LED's (output). Why is that?
 
 ![](images/schematic.png)
 
