@@ -12,7 +12,7 @@ To make use of the photoresistor as well, I made an easter egg so that, if all t
 ## Inspiration
 Christmas has always been a big occasion in the Philippines. In addition to being a majority Catholic country, we Filipinos are very festive family and love celelbrating with family. As a result, I wanted to commemorate the day through this project, not only through the joyous tunes but also using materials I can find to make it more festive, such as creating a Christmas tree.
 
-![](images/christmasphilippines.png)
+![](images/phxmas.png)
 
 ## Schematic
 The build of the final schematic is below, which I made through drawing.
@@ -33,6 +33,8 @@ From the beginning, I already knew I wanted to use other components instead of L
  
  At first, I had a hard time getting the servo motor to move, as I still wasn't fully familiar with not using the delay() function. As a result, my melodies would play, but my servo motor would stop. There were even times where it glitched out and only one tone played. However, learning and using Professor's [code for simultaneous LED's and melodies](https://github.com/michaelshiloh/toneMelodyAndBlinkWithoutDelay), I was able to get both of them to work.
  
+ ![alt-text](images/servo.gif)
+ 
  ## Adding an Easter Egg
  After getting all of these done, I noticed that I didn't make use of my photo resistor. Thinking of a way to pay tribute to my country in this project, I decided to have an easter egg melody play if you got both the photo resistor and the potentiometer to 0 values: the national anthem would play! Since there was no Arduino code for my national anthem, I had to make it myself. I made use of various sites and videos to find the right tune.
  
@@ -43,8 +45,11 @@ From the beginning, I already knew I wanted to use other components instead of L
  ## Making It Festive
  Deciding it still wasn't festive enough, I wanted to add something Christmas-related to the circuit, so it wasn't just filled with wires. Suddenly, I remembered that Christmas trees usually have a rotating function to them, creating this idea in my head to put a Christmas tree on the servo motor so it can move with the melody.
  
+  ![alt-text](images/rotatingtree.gif)
  
  First wanting to use paper, I thought that was too simple. Then, I remembered the convenience store here sold clay, which I then bought to create the tree.
  ![](images/claybox.png)
 
  ![](images/christmastree.png)
+ 
+  ![alt-text](images/rotate.gif)
