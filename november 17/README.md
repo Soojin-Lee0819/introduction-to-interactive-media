@@ -48,6 +48,7 @@ From the beginning, I already knew I wanted to use other components instead of L
   ![alt-text](images/rotatingtree.gif)
  
  First wanting to use paper, I thought that was too simple. Then, I remembered the convenience store here sold clay, which I then bought to create the tree.
+ 
  ![](images/claybox.png)
 
  ![](images/christmastree.png)
