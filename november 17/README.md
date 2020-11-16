@@ -1,5 +1,5 @@
 # Arduino Assignment 3: Piezo Buzzer & Servo Motor
-This week's assignment makes use of a buzzer, servo motor, button, photoresistor, and potentiometer to create a "Christmas Radio" to commemorate the holiday season.
+This week's assignment creates a "Christmas Radio" to commemorate the holiday season.
 
 Mapping the potentiometer from 0 to 4, each number represents a new song, which will play if you hold down the button (1 for We Wish You A Merry Christmas,
 2 for Santa Claus is Coming to Town, 3 for Jingle Bells). As the song plays, the servo motor--to which I added a clay Christmas tree on top--will spin accordingly.
