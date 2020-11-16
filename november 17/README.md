@@ -18,10 +18,12 @@ The build of the final schematic is below, which I made through a combination of
 At first, I wanted to make use of the photo resistor, which was the first analog sensor that we learned how to use in class. It was going fairly well, with the code working the way I had hoped. I was actually stuck because my LED's were less bright than usual, but I figured out after a while that I was using the wrong resistor! _It's crazy to think how such a small mistake can make a big difference._
 
 ![alt-text](images/photoresistor.gif)
+
  ![](images/firstbuild.png)
  
  ![](images/secondbuild.png)
 
+ ![](images/video.png)
 
 ![](images/philippinespiano.png)
 
