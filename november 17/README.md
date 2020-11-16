@@ -9,24 +9,42 @@ To make use of the photoresistor as well, I made an easter egg so that, if all t
 
 [The link to the full video is here!](https://vimeo.com/479846751)
 
+## Inspiration
+Christmas has always been a big occasion in the Philippines. In addition to being a majority Catholic country, we Filipinos are very festive family and love celelbrating with family. As a result, I wanted to commemorate the day through this project, not only through the joyous tunes but also using materials I can find to make it more festive, such as creating a Christmas tree.
+
+![](images/christmasphilippines.png)
+
 ## Schematic
-The build of the final schematic is below, which I made through a combination of drawing and Photoshop. I had a much easier time making this schematic after following Profesor Shiloh's example in class. I'm curious though because he mentions that input and output should be in different sides of the Arduino board, however, from all the schematics I've seen, the button (which I assume is an input) is on the right with the LED's (output). Why is that?
+The build of the final schematic is below, which I made through drawing.
 
 ![](images/schematic.png)
 
-## First Build and Setbacks
-At first, I wanted to make use of the photo resistor, which was the first analog sensor that we learned how to use in class. It was going fairly well, with the code working the way I had hoped. I was actually stuck because my LED's were less bright than usual, but I figured out after a while that I was using the wrong resistor! _It's crazy to think how such a small mistake can make a big difference._
-
-![alt-text](images/photoresistor.gif)
+## Playing The Melodies
+From the beginning, I already knew I wanted to use other components instead of LED's, which have been a part of my Arduino for two projects now. Deciding I wanted to go out of my comfort zone, I decided to make use of the photo resistor and servo motor, in additio to the other components required for this project. My first build is below, which was still quite messy and used various colored wires instead of having them all uniform with one another.
 
  ![](images/firstbuild.png)
  
- ![](images/secondbuild.png)
-
+ Having the potentiometer, photo resistor, and buzzer all on the board, I began the first stage of adding the songs. Using the melodies from [this code](https://create.arduino.cc/projecthub/joshi/piezo-christmas-songs-fd1ae9) as it was hard to make my own, I made it so that the song would play to one digit in the potentiometer.
+ 
+ ## Spinning The Servo Motor
+ After I got all the melodies in order, it was time to add the servo motor. Adding it to my board (which was hard because I didn't know where to put the 5V wire), my build now looked like this:
+ 
+  ![](images/secondbuild.png)
+ 
+ At first, I had a hard time getting the servo motor to move, as I still wasn't fully familiar with not using the delay() function. As a result, my melodies would play, but my servo motor would stop. There were even times where it glitched out and only one tone played. However, learning and using Professor's [code for simultaneous LED's and melodies](https://github.com/michaelshiloh/toneMelodyAndBlinkWithoutDelay), I was able to get both of them to work.
+ 
+ ## Adding an Easter Egg
+ After getting all of these done, I noticed that I didn't make use of my photo resistor. Thinking of a way to pay tribute to my country in this project, I decided to have an easter egg melody play if you got both the photo resistor and the potentiometer to 0 values: the national anthem would play! Since there was no Arduino code for my national anthem, I had to make it myself. I made use of various sites and videos to find the right tune.
+ 
  ![](images/video.png)
 
-![](images/philippinespiano.png)
+ ![](images/philippinespiano.png)
 
-![](images/claybox.png)
+ ## Making It Festive
+ Deciding it still wasn't festive enough, I wanted to add something Christmas-related to the circuit, so it wasn't just filled with wires. Suddenly, I remembered that Christmas trees usually have a rotating function to them, creating this idea in my head to put a Christmas tree on the servo motor so it can move with the melody.
+ 
+ 
+ First wanting to use paper, I thought that was too simple. Then, I remembered the convenience store here sold clay, which I then bought to create the tree.
+ ![](images/claybox.png)
 
-![](images/christmastree.png)
+ ![](images/christmastree.png)
