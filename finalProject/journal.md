@@ -5,7 +5,7 @@
 Because I thought our last assignment was the final project, I started early. I first wanted to recreate Pacman, so I was able to find the [character sprites](https://www.spriters-resource.com/game_boy_advance/namcomuseum/sheet/22732/) for the game. Now having something to animate, I duplicated the 5 sprites to 15 to make the animation slower.
 
 
-I also added the Pacman theme song to my Arduino, which can be seen in this link:
+I also added the Pacman theme song to my Arduino, which can be seen in this [link](https://youtu.be/12gmkMfC8Mk).
 
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
@@ -26,5 +26,5 @@ I also added the Pacman theme song to my Arduino, which can be seen in this link
  
 ## November 24
 
-After finally realizing that our assignment was not the final project, I rushed to finish what I had so far. I added many things, such as connecting Arduino to Processing, putting the score on the top left corner, and adding the starting and game over screens.
+After finally realizing that our assignment was not the final project, I rushed to finish what I had so far. I added many things, such as connecting Arduino to Processing, putting the score on the top left corner, and adding the starting and game over screens. A video of my friend playing it can be found [here](https://youtu.be/x8DGZu52Qyw).
 
