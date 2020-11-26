@@ -2,7 +2,7 @@
 
 ## DESCRIPTION
 
-This week's assignment made use of the Piezo buzzer and the potentiometer that communicated to Processing to make a Flappy Bird game. When Processing starts to run, it plays the Mario Introduction melody. Then, the game begins and the bird uses the J key to make the bird float through the pipes, playing the Mario 1-Up sound when successful and gaining a point. When the bird hits the ground or the pipes, it triggers the game over.
+My final project will make use of a Piezo buzzer, a potentiometer, and three buttons that communicate to Processing to make a Flappy Bird game. When Processing starts to run, it plays the Mario Introduction melody. You are given the chance to customize your gameplay through changing the bird's color or the background. Then, the game begins and the bird uses the J key to make the bird float through the pipes, playing the Mario 1-Up sound when successful and gaining a point. When the bird hits the ground or the pipes, it triggers the game over.
 
 ## SHORTCUTS
 [Day 1](journal.md#day-1), [Day 2](journal.md#day-2), [Day 3](journal.md#day-3), [Day 4](journal.md#day-4), [Day 5](journal.md#day-5), 
