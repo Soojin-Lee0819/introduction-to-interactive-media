@@ -1,6 +1,10 @@
 # FINAL PROJECT
 
-## November 21
+## DESCRIPTION
+
+## JOURNAL ENTRIES
+
+### DAY 1: November 21
 
 Because I thought our last assignment was the final project, I started early. I first wanted to recreate Pacman, so I was able to find the [character sprites](https://www.spriters-resource.com/game_boy_advance/namcomuseum/sheet/22732/) for the game.
 
@@ -14,7 +18,9 @@ I also added the Pacman theme song to my Arduino, which can be seen in this [lin
 
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
-## November 22
+--------------------
+
+### DAY 2: November 22
 
  I was able to make the animation move slow even without 15 sprites, so I reduced it to 5 again.
  
@@ -32,7 +38,9 @@ I also added the Pacman theme song to my Arduino, which can be seen in this [lin
  
  ![alt-text](images/birdmove1.gif)
  
- ## November 23
+ --------------------
+ 
+ ### DAY 3: November 23
  
 To start, they just press the R key and then use the J key to avoid the pipes. Every time they successfully avoid a pipe, the [Mario 1-UP sound](https://bikeshedeffect.weebly.com/arduino-piezo-sounds.html) will play on the buzzer. If the player falls or hits a pipe, they lose.
 
@@ -45,8 +53,10 @@ After I knew this was working, I removed the fill and stroke of both. Then, I us
 ![alt-text](images/birdmove2.gif)
 
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
+
+--------------------
  
-## November 24
+### DAY 4: November 24
 
 I kept the [Pacman theme song](https://github.com/robsoncouto/arduino-songs/blob/master/pacman/pacman.ino) for the starting screen, and made it so the player can use this time to change the background using the potentiometer.
 
@@ -56,7 +66,9 @@ After finally realizing that our assignment was not the final project, I rushed 
 
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
-## November 25
+--------------------
+
+### DAY 5: November 25
 
 I added a new customization screen, to let the player have more time and guidance to change their bird's color and the background. I created a customization screen through Photoshop, and found more sprites to appear when the player makes their choice.
 
