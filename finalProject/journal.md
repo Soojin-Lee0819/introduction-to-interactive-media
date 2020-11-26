@@ -2,9 +2,11 @@
 
 ## November 21
 
-Because I thought our last assignment was the final project, I started early. I first wanted to recreate Pacman, so I was able to find the [character sprites](https://www.spriters-resource.com/game_boy_advance/namcomuseum/sheet/22732/) for the game. Now having something to animate, I duplicated the 5 sprites to 15 to make the animation slower.
-
+Because I thought our last assignment was the final project, I started early. I first wanted to recreate Pacman, so I was able to find the [character sprites](https://www.spriters-resource.com/game_boy_advance/namcomuseum/sheet/22732/) for the game.
 ![](images/pacmansprites.png)
+
+ Now having something to animate, I duplicated the 5 sprites to 15 to make the animation slower.
+
 ![alt-text](images/pacmanmove.gif)
 
 I also added the Pacman theme song to my Arduino, which can be seen in this [link](https://youtu.be/12gmkMfC8Mk).
@@ -21,7 +23,7 @@ I also added the Pacman theme song to my Arduino, which can be seen in this [lin
  
  ![](images/pacmanbg.png)
  
- Then, I tried creating the Pacman eating sound, but it was too hard because there was no correct pitch on Arduino. This is seen below:
+ Then, I tried creating the Pacman eating sound, but it was too hard because there was no correct pitch on Arduino.
  
  **WILL I CHANGE MY PROJECT?** After this, I decided to change my project to Flappy Bird.
  
@@ -73,5 +75,5 @@ Icons to appear when the player chooses the background:
 ![](images/rainbow.png)
 ![](images/ghost.png)
 
-
+**WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
