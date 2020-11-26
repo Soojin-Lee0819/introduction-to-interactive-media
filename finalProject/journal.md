@@ -1,4 +1,4 @@
-# FINAL PROJECT: Flappy Bird Knockoff
+# FINAL PROJECT: Flappy Bird Remake
 
 ## DESCRIPTION
 
