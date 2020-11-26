@@ -2,9 +2,13 @@
 
 ## DESCRIPTION
 
+## SHORTCUTS
+[Day 1](journal.md#day-1), [Day 2](journal.md#day-2), [Day 3](journal.md#day-3), [Day 4](journal.md#day-4), [Day 5](journal.md#day-5), 
+
 ## JOURNAL ENTRIES
 
 ### DAY 1: November 21
+##### day-1
 
 Because I thought our last assignment was the final project, I started early. I first wanted to recreate Pacman, so I was able to find the [character sprites](https://www.spriters-resource.com/game_boy_advance/namcomuseum/sheet/22732/) for the game.
 
@@ -23,6 +27,7 @@ I also added the Pacman theme song to my Arduino, which can be seen in this [lin
 --------------------
 
 ### DAY 2: November 22
+##### day-2
 
  I was able to make the animation move slow even without 15 sprites, so I reduced it to 5 again.
  
@@ -43,6 +48,7 @@ I also added the Pacman theme song to my Arduino, which can be seen in this [lin
  --------------------
  
  ### DAY 3: November 23
+ ##### day-3
  
 To start, they just press the R key and then use the J key to avoid the pipes. Every time they successfully avoid a pipe, the [Mario 1-UP sound](https://bikeshedeffect.weebly.com/arduino-piezo-sounds.html) will play on the buzzer. If the player falls or hits a pipe, they lose.
 
@@ -59,6 +65,7 @@ After I knew this was working, I removed the fill and stroke of both. Then, I us
 --------------------
  
 ### DAY 4: November 24
+##### day-4
 
 I kept the [Pacman theme song](https://github.com/robsoncouto/arduino-songs/blob/master/pacman/pacman.ino) for the starting screen, and made it so the player can use this time to change the background using the potentiometer.
 
@@ -71,6 +78,7 @@ After finally realizing that our assignment was not the final project, I rushed 
 --------------------
 
 ### DAY 5: November 25
+##### day-5
 
 I added a new customization screen, to let the player have more time and guidance to change their bird's color and the background. I created a customization screen through Photoshop, and found more sprites to appear when the player makes their choice.
 
