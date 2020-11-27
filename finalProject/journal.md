@@ -102,3 +102,15 @@ Icons to appear when the player chooses the background:
 
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
+--------------------
+
+### DAY 6: November 27
+##### day-6
+
+![alt-text](images/serial1.gif)
+![alt-text](images/serial2.gif)
+
+![](images/potentiometer.png)
+![](images/buttons.png)
+
+![alt-text](images/customization.gif)
