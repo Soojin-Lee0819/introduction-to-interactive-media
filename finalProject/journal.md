@@ -109,6 +109,7 @@ Icons to appear when the player chooses the background:
 
 ![alt-text](images/serial1.gif)
 
+[link](https://www.dummies.com/computers/arduino/how-to-send-multiple-signals-from-the-arduino-to-processing/)
 ![alt-text](images/serial2.gif)
 
 ![](images/potentiometer.png)
