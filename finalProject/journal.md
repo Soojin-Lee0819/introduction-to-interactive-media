@@ -28,8 +28,8 @@ I also added the Pacman theme song to my Arduino, which can be seen in this [lin
 
 --------------------
 
-### DAY 2: November 22
 ##### day-2
+### DAY 2: November 22
 
  I was able to make the animation move slow even without 15 sprites, so I reduced it to 5 again.
  
@@ -49,8 +49,8 @@ I also added the Pacman theme song to my Arduino, which can be seen in this [lin
  
  --------------------
  
- ### DAY 3: November 23
  ##### day-3
+ ### DAY 3: November 23
  
 To start, they just press the R key and then use the J key to avoid the pipes. Every time they successfully avoid a pipe, the [Mario 1-UP sound](https://bikeshedeffect.weebly.com/arduino-piezo-sounds.html) will play on the buzzer. If the player falls or hits a pipe, they lose.
 
@@ -65,9 +65,9 @@ After I knew this was working, I removed the fill and stroke of both. Then, I us
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
 --------------------
- 
-### DAY 4: November 24
+
 ##### day-4
+### DAY 4: November 24
 
 I kept the [Pacman theme song](https://github.com/robsoncouto/arduino-songs/blob/master/pacman/pacman.ino) for the starting screen, and made it so the player can use this time to change the background using the potentiometer.
 
@@ -79,8 +79,8 @@ After finally realizing that our assignment was not the final project, I rushed 
 
 --------------------
 
-### DAY 5: November 25
 ##### day-5
+### DAY 5: November 25
 
 I added a new customization screen, to let the player have more time and guidance to change their bird's color and the background. I created a customization screen through Photoshop, and found more sprites to appear when the player makes their choice.
 
@@ -104,8 +104,8 @@ Icons to appear when the player chooses the background:
 
 --------------------
 
-### DAY 6: November 27
 ##### day-6
+### DAY 6: November 27
 
 ![alt-text](images/serial1.gif)
 
