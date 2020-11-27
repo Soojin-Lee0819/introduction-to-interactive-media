@@ -9,8 +9,8 @@ My final project will make use of a Piezo buzzer, a potentiometer, a photoresist
 
 ## JOURNAL ENTRIES
 
-### DAY 1: November 21 
 ##### day-1
+### DAY 1: November 21
 
 Because I thought our last assignment was the final project, I started early. I first wanted to recreate Pacman, so I was able to find the [character sprites](https://www.spriters-resource.com/game_boy_advance/namcomuseum/sheet/22732/) for the game.
 
