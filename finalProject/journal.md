@@ -120,7 +120,7 @@ After reading about sending multiple signals from Arduino to Processing through 
 Then, since I had all the necessary components, I began to play around with the customization screen. Deciding there were too many words and players who don't know Arduino components may be confused with "potentiometer", I decided to create more visual instructions. I created an 8-bit potentiometer and buttons through Adobe Illustrator.
 
 ![](images/potentiometer.png)
-![](images/buttons.png)
+![](images/button.png)
 
 Adding them to the customization screen, it now looks like this:
 
