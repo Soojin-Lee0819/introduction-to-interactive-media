@@ -107,12 +107,27 @@ Icons to appear when the player chooses the background:
 ##### day-6
 ### DAY 6: November 27
 
+I decided to work on Arduino today. I wanted the pushbuttons to act as states, which meant I wanted them to stay on when pressed. Using help from [this video](https://www.youtube.com/watch?v=uCBuilKKxuk&ab_channel=learnelectronics), I was able to get them all working. However, this proved to be quite hard to do for three buttons, as the order made it so that you cannot turn another button on unless the top one is off.
+
 ![alt-text](images/serial1.gif)
 
-[link](https://www.dummies.com/computers/arduino/how-to-send-multiple-signals-from-the-arduino-to-processing/)
+However, after experimenting with the code, I was able to get it to work. Then, all I had to do was transfer my code to my other Arduino file and communicate with Processing. However, since I was only working with one signal so far using the potentiometer, adding a second signal would disrupt the flow of the serial read and make the background glitchy. 
+
+After reading about sending multiple signals from Arduino to Processing through [this link](https://www.dummies.com/computers/arduino/how-to-send-multiple-signals-from-the-arduino-to-processing/), I was able to get the code running smoothly by creating an array of the signals and putting them into one string. The clean serial read is below:
+
 ![alt-text](images/serial2.gif)
+
+Then, since I had all the necessary components, I began to play around with the customization screen. Deciding there were too many words and players who don't know Arduino components may be confused with "potentiometer", I decided to create more visual instructions. I created an 8-bit potentiometer and buttons through Adobe Illustrator.
 
 ![](images/potentiometer.png)
 ![](images/buttons.png)
 
+Adding them to the customization screen, it now looks like this:
+
 ![alt-text](images/customizationnew.gif)
+
+One problem I have to solve is getting the communication from Processing to Arduino to work again, as I noticed with adding the new code is that my game no longer plays the 1-UP sound when adding a point.
+
+**WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
+
+--------------------
