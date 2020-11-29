@@ -131,3 +131,27 @@ One problem I have to solve is getting the communication from Processing to Ardu
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
 --------------------
+
+##### day-7
+### DAY 7: November 29
+
+Today, I spent the ENTIRE day fixing my pipes and their constraints. For my last assignment, I was bothered that sometimes, when the bird would hit the pipe, it wouldn't recognize it as being a game over. I decided to completely delete my whole code and start fresh. This proved to be a challenge. In a new, simple Processing file, I first started off making a bird with smooth jumping action, unlike the one I had before that was just floating.
+
+![alt-text](images/ballmove.gif)
+
+Then came the difficult part. Instead of using two separate rectangles that would reload after it left a screen, I decided to use an array. Using tutorials with [programming arrays and class objects](https://www.youtube.com/watch?v=QUFkRIh706k&ab_channel=JohnMcCaffrey) and also [arrays with flexible size](https://www.youtube.com/watch?v=Hf-AHwRaodA&ab_channel=TheCodingTrain), I was able to make an array pipes that would load a new one every time the framecount would equal zero.
+
+![alt-text](images/smoothpipes.gif)
+
+After making sure it all ran smoothly on the simple file, I transferred it all to my main Processing file and tweaked it. I also added a new Game Over screen. The final product turned out like this:
+
+![alt-text](images/birdmove3.gif)
+![](images/gameover.png)
+
+However, after trying to create a restart function for my game, I realized how difficult this will be, as I would have to delete my use of a noLoop(); which stops the entire screen from moving like the game were still on. I may need to remove this aspect from the game.
+
+I was also quite confused as to why, even though the score was increasing, the 1-UP sound was not playing for some pipes. This may be due to my Piezo buzzer being broken, but I am not entirely sure.
+
+**WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
+
+--------------------
