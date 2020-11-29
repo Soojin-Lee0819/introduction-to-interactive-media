@@ -152,6 +152,10 @@ However, after trying to create a restart function for my game, I realized how d
 
 I was also quite confused as to why, even though the score was increasing, the 1-UP sound was not playing for some pipes. This may be due to my Piezo buzzer being broken, but I am not entirely sure.
 
+Since I will be implementing the bird's moves to be determined by the photoresistor, I made an 8-bit version of that as well.
+
+![](images/photoresistor.png)
+
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
 --------------------
