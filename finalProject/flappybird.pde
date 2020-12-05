@@ -1,11 +1,11 @@
-// Arduino-Processing Assignment: Katie Ferreol
-// November 24, 2020
-// Use the R key to start the game, and use the J key to move past the pipes!
+// FINAL Arduino-Processing Assignment: Katie Ferreol
+// December 10, 2020
+// Use the R key to start the game, and use the spacebar to move past the pipes!
 
 //importing communication
 import processing.serial.*;
 Serial myPort;      // The serial port
-int[] serialInArray = new int[3]; // Where we'll put what we receive
+int[] serialInArray = new int[2]; // Where we'll put what we receive
 int serialCount = 0;     // A count of how many bytes we receive
 boolean firstContact = false;
 
@@ -47,6 +47,7 @@ int score = 0;
 
 //declaring time variable
 int time = millis();
+int countdown = 300;
 
 int[] pipeX, pipeY;
 
@@ -56,6 +57,7 @@ boolean player_lose = false;
 boolean player_start = false;
 boolean start_screen = true;
 boolean custom_screen = false;
+boolean get_ready = false;
 
 //declaring font variable
 PFont title;
@@ -87,7 +89,7 @@ void setup() {
   bluebird = loadImage("bluebird.png");
   gameover = loadImage("gameover.png");
   startscreen = loadImage("start.png");
-  getreadyscreen = loadImage("start.png");
+  getreadyscreen = loadImage("getready.png");
   customizationscreen = loadImage("customize.png");
 
   pipeX = new int[1000000];  //[0,0,0,0]
@@ -135,6 +137,7 @@ void draw() {
     score();
   }
 
+  getreadyScreen();
   birdMove();
   playerLose();
   customizeScreen();
@@ -159,7 +162,6 @@ void groundMove() {
 
 //moving the pipes
 void pipesMove() {
-  print(did_print);
   for (int i = 0; i < total; i++)
   {
     image(topPipe, pipeX[i], pipeY[i]);
@@ -269,8 +271,7 @@ void birdMove() {
   }
 }
 
-void keyPressed()
-{
+void keyPressed() {
   if (key == ' ') {
     velocity = -8;
   }
@@ -302,63 +303,34 @@ void startScreen() {
     image(startscreen, 0, 0, 508, 800);
     image(yellowbird, birdx, birdy, 100, 100);
   }
-  if ((millis() > time) && (keyPressed)) {
+  if ((millis() > time + 8000) && (keyPressed)) {
     if (key == 'r') {
       time = millis();
-      player_start = true;
       start_screen = false;
+      get_ready = true;
     }
   }
 }
-
-//void restartScreen() {
-//  if (keyPressed) {
-//    if (key == 'h') {
-//      if (player_lose == true) {
-//        player_lose = false;
-//        player_start = false;
-//        start_screen = true;
-//        custom_screen = false;
-//        birdx = 200;
-//        birdy = 400;
-//        x1 = -5;
-//        x2 = 500;
-//      }
-//    }
-//  }
-//}
-
-
-//void retryScreen() {
-//  if (keyPressed) {
-//    if (key == 'r') {
-//      if (player_lose == true) {
-//        player_lose = false;
-//        player_start = true;
-//        start_screen = false;
-//        custom_screen = false;
-//        birdx = 200;
-//        birdy = 400;
-//      }
-//    }
-//  }
-//}
 
 void customizeScreen() {
   textFont(title);
   textSize(10);
   fill(85, 55, 70);
 
-  if ((millis() > time) && keyPressed) {
+  if ((millis() > time + 8000) && keyPressed) {
     if (key == 'c') {
       custom_screen = true;
       start_screen = false;
       time = millis();
-    } else if ((custom_screen == true) && (key == 'r')) {
+    } 
+  }
+  if (keyPressed) {
+    if ((custom_screen == true) && (key == 'r')) {
       custom_screen = false;
-      player_start = true;
+      get_ready = true;
       birdx = 200;
       birdy = 400;
+      time = millis();
     }
   }
   if (custom_screen == true) {
@@ -400,30 +372,46 @@ void playerLose() {
     image(gameover, 0, 0, 508, 800);
     fill(255);
     textSize(25);
-    text(score, 300, 437);
+    text(score, 290, 463);
     x1 = 0;
     x2 = 0;
-    //birdy = 670;
-    //for (int i = 0; i < total; i++) {
-    //  pipeX[i]+=2;
-    //}
     noLoop();
   }
 }
 
+void getreadyScreen() {
+  if (get_ready == true) {
+    image(getreadyscreen, 0, 0, 508, 800); 
+    if (whichbird == 0) {
+      image(yellowbird, birdx, birdy, 100, 100);
+    }
+    if (whichbird == 1) {
+      image(redbird, birdx, birdy, 100, 100);
+    }
+    if (whichbird == 2) {
+      image(bluebird, birdx, birdy, 100, 100);
+    } 
+    countdown--;
+  }
+  if (countdown <= 0) {
+    get_ready = false;
+    player_start = true;
+  }
+}
+
 void serialEvent(Serial myPort) {
-  int inByte = myPort.read();
+  int arduinoCommunication = myPort.read();
   if (firstContact == false) {
-    if (inByte == 'A') {
+    if (arduinoCommunication == 'A') {
       myPort.clear();
       firstContact = true;
       myPort.write('A');
     }
   } else {
-    serialInArray[serialCount] = inByte;
+    serialInArray[serialCount] = arduinoCommunication;
     serialCount++;
     // If we have 3 bytes:
-    if (serialCount > 1 ) {
+    if (serialCount > 1) {
       whichbg = serialInArray[1];
       whichbird = serialInArray[0];
       // print the values (for debugging purposes only):
