@@ -178,7 +178,7 @@ I thought you had to do this every time you declared a variable that connected A
 
 I took Professor's advice and removed the Serial.read() from my command and it worked perfectly! Now that I had that out of the way, I wanted to start changing the control of the bird from the SPACEBAR to the PHOTORESISTOR. I started off by using a new breadboard to set up the photoresistor.
 
-![](images/photoresistor.png)
+![](images/photores.png)
 
 After this, I added a new array into my Processing file that would read the photoresistor and make the bird jump. However, after coding this and trying it out, it was a lot harder to use compared to the spacebar. After numerous trials, I couldn't even get to the 2nd point! Even though it will add more Processing-Arduino communication, I decided it's not worth it and went back to using the spacebar.
 
@@ -186,7 +186,7 @@ After this, I added a new array into my Processing file that would read the phot
 
 Because I wasn't using the photoresistor anymore, I had to change the 8-bit instruction. Using Adobe Illustrator, I changed the photoresistor to a spacebar.
 
-![](images/spacecontrol.png)
+![](images/spacebar.png)
 
 Since I realized there was no instruction from the game itself to use the spacebar to make the bird move, I decided to add a 'Get Ready!' page and a visual instruction on how to make the bird fly. This comes after the player presses R to start, and stays there for around 5 seconds before the pipes start moving towards the bird.
 
