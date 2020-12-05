@@ -196,6 +196,8 @@ Knowing that the components in my Arduino will no longer be changed, I created t
 
 ![](images/schematic.png)
 
+I may be done with this project! I might give it a few days because I might want to add something, but overall, I think I'm finished!
+
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
 --------------------
