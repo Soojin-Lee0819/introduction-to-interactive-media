@@ -192,6 +192,10 @@ Since I realized there was no instruction from the game itself to use the spaceb
 
 ![](images/getreadynew.png)
 
+Knowing that the components in my Arduino are final, I finally created the final schematic.
+
+![](images/schematic.png)
+
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
 --------------------
