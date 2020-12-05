@@ -4,25 +4,26 @@
 //setting up variables
 byte val1;
 int val2;
+int arduinoCommunication = 0;
+char processingCommunication;
+
+//declaring pins
 int speakerPin = 8;
 const int potentiometerPin = A0;
 const int yellowButton = A2;
 const int redButton = A3;
 const int blueButton = A4;
 
-int arduinoCommunication = 0;
-char processingCommunication;
-
+//declaring states of buttons
 int yellowState = 0;
 int redState = 0;
 int blueState = 0;
 
+//variables needed for state reading
 int yellowPrevious = 0;
 int yellowPush = 0;
-
 int redPrevious = 0;
 int redPush = 0;
-
 int bluePrevious = 0;
 int bluePush = 0;
 
@@ -77,21 +78,26 @@ void setup() {
 
 void loop() {
 
+  //reading values that Processing sends to Arduino
   if (Serial.available() > 0) {
-  processingCommunication = Serial.read();
+    processingCommunication = Serial.read();
 
-  int potentiometerState = analogRead(potentiometerPin);
-  val1 = map(potentiometerState, 0, 1023, 0, 4);
+    //mapping potentiometer for background
+    int potentiometerState = analogRead(potentiometerPin);
+    val1 = map(potentiometerState, 0, 1023, 0, 4);
 
-  yellowState = analogRead(yellowButton);
-  int yellowOn = map(yellowState, 0, 1023, 0, 2);
+    //checking state of yellow button
+    yellowState = analogRead(yellowButton);
+    int yellowOn = map(yellowState, 0, 1023, 0, 2);
 
-  redState = analogRead(redButton);
-  int redOn = map(redState, 0, 1023, 0, 2);
+    //checking state of red button
+    redState = analogRead(redButton);
+    int redOn = map(redState, 0, 1023, 0, 2);
 
-  blueState = analogRead(blueButton);
-  int blueOn = map(blueState, 0, 1023, 0, 2);
-  
+    //checking state of blue button
+    blueState = analogRead(blueButton);
+    int blueOn = map(blueState, 0, 1023, 0, 2);
+
 
     //if bird is in the slot between the pipes, play 1-UP sound
     if (processingCommunication == '4') {
@@ -105,7 +111,8 @@ void loop() {
     } else if (processingCommunication == '5') {
       noTone(speakerPin);
     }
-    
+
+    //state changes of yellow, red and blue buttons
     if (yellowOn != yellowPrevious) {
       if (yellowOn == 1) {
         yellowPush++;
@@ -140,15 +147,15 @@ void loop() {
       bluePush = 0;
       val2 = 2;
     }
+    //write values and send them to Processing
+    Serial.write(val2);
+    Serial.write(val1);
   }
-  Serial.write(val2);
-  Serial.write(val1);
-}
 
-//establish contact between Arduino and Processing
-void establishContact() {
-  while (Serial.available() <= 0) {
-    Serial.println("A");   // send a capital A
-    delay(300);
+  //establish contact between Arduino and Processing
+  void establishContact() {
+    while (Serial.available() <= 0) {
+      Serial.println("A");   // send a capital A
+      delay(300);
+    }
   }
-}
