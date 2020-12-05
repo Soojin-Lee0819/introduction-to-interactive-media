@@ -1,6 +1,8 @@
-// FINAL Arduino-Processing Assignment: Katie Ferreol
+// FINAL PROJECT: Katie Ferreol
 // December 10, 2020
-// Use the R key to start the game, and use the spacebar to move past the pipes!
+// Use the R key to start the game, or press C to customize your game!
+// Use the Arduino buttons to change your bird's color, and the potentiometer to change your background!
+// Press the spacebar and fly into the pipes! If you hit any or hit the ground, you lose!
 
 //importing communication
 import processing.serial.*;
@@ -34,11 +36,14 @@ int x1 = -5;
 int x2 = 500;
 float birdx = 200;
 float birdy = 400;
+
+//declaring variables for bird's flight
 int gravity = 1;
 int velocity;
-int gameState;
 int total = 0;
 float lift = -9;
+
+//declaring player's choice variables for bg and bird color
 int whichbird = 0;
 int whichbg = 0;
 
@@ -49,6 +54,7 @@ int score = 0;
 int time = millis();
 int countdown = 300;
 
+//declaring array for pipes
 int[] pipeX, pipeY;
 
 //declaring boolean variables
@@ -92,7 +98,8 @@ void setup() {
   getreadyscreen = loadImage("getready.png");
   customizationscreen = loadImage("customize.png");
 
-  pipeX = new int[1000000];  //[0,0,0,0]
+  //declaring a bunch of pipes
+  pipeX = new int[1000000];
   pipeY = new int[pipeX.length];
 
   for (int i = 0; i < pipeX.length; i++)
@@ -186,6 +193,7 @@ void pipesMove() {
   }
 }
 
+//Background #1
 void dayMode() {
   image(bg1, x1, 0, 508, 800);
   x1--;
@@ -201,6 +209,7 @@ void dayMode() {
   }
 }
 
+//Background #2
 void nightMode() {
   image(bg2, x1, 0, 508, 800);
   x1--;
@@ -216,6 +225,7 @@ void nightMode() {
   }
 }
 
+//Background #3
 void neonMode() {
   image(bg3, x1, 0, 508, 800);
   x1--;
@@ -231,6 +241,7 @@ void neonMode() {
   }
 }
 
+//Background #4
 void knightMode() {
   image(bg4, x1, 0, 508, 800);
   x1--;
@@ -271,12 +282,14 @@ void birdMove() {
   }
 }
 
+//pressing spacebar
 void keyPressed() {
   if (key == ' ') {
     velocity = -8;
   }
 }
 
+//putting score on upper left corner
 void score() {
   fill(255);
   textFont(title);
@@ -284,6 +297,7 @@ void score() {
   text("Score: " + score, 20, 40);
 }
 
+//starting screen
 void startScreen() {
   if (player_start == false && start_screen == true) {
 
@@ -303,6 +317,7 @@ void startScreen() {
     image(startscreen, 0, 0, 508, 800);
     image(yellowbird, birdx, birdy, 100, 100);
   }
+  //you can't press anything until the starting melody is finished playing
   if ((millis() > time + 8000) && (keyPressed)) {
     if (key == 'r') {
       time = millis();
@@ -312,11 +327,13 @@ void startScreen() {
   }
 }
 
+//customization screen
 void customizeScreen() {
   textFont(title);
   textSize(10);
   fill(85, 55, 70);
 
+  //you can't press anything until the starting melody is finished playing
   if ((millis() > time + 8000) && keyPressed) {
     if (key == 'c') {
       custom_screen = true;
@@ -367,6 +384,7 @@ void customizeScreen() {
   }
 }
 
+//player losing screen
 void playerLose() {
   if (player_lose == true) {
     image(gameover, 0, 0, 508, 800);
@@ -375,10 +393,12 @@ void playerLose() {
     text(score, 290, 463);
     x1 = 0;
     x2 = 0;
+    //pauses everything
     noLoop();
   }
 }
 
+//get ready screen
 void getreadyScreen() {
   if (get_ready == true) {
     image(getreadyscreen, 0, 0, 508, 800); 
@@ -391,6 +411,7 @@ void getreadyScreen() {
     if (whichbird == 2) {
       image(bluebird, birdx, birdy, 100, 100);
     } 
+    //starts countdown when player presses 'R'
     countdown--;
   }
   if (countdown <= 0) {
@@ -399,6 +420,7 @@ void getreadyScreen() {
   }
 }
 
+//communication of Processing and Arduino
 void serialEvent(Serial myPort) {
   int arduinoCommunication = myPort.read();
   if (firstContact == false) {
@@ -410,15 +432,11 @@ void serialEvent(Serial myPort) {
   } else {
     serialInArray[serialCount] = arduinoCommunication;
     serialCount++;
-    // If we have 3 bytes:
     if (serialCount > 1) {
       whichbg = serialInArray[1];
       whichbird = serialInArray[0];
-      // print the values (for debugging purposes only):
       println(whichbg + ", " + whichbird);
-      // Send a capital A to request new sensor readings:
       myPort.write('A');
-      // Reset serialCount:
       serialCount = 0;
     }
   }
