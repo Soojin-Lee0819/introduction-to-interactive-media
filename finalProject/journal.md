@@ -5,7 +5,7 @@
 My final project will make use of a Piezo buzzer, a potentiometer, a photoresistor, and three buttons that communicate to Processing to make a Flappy Bird game. When Processing starts to run, it plays the Mario Introduction melody. In the start screen, you are given the chance to either start the game or to customize your gameplay through changing the bird's color (through the buttons) or the background (through the potentiometer). Then, when the player starts the game, the bird begins to move down and it is up to the player to use the photo resistor to make the bird float through the pipes, playing the Mario 1-Up sound when successful and gaining a point. When the bird hits the ground or the pipes, it triggers the game over. I would want to try to make it so that, when the player presses the reset button on the Arduino board, it also resets the entire game, but I'm not sure if that is possible yet.
 
 ## SHORTCUTS
-[Day 1](journal.md#day-1), [Day 2](journal.md#day-2), [Day 3](journal.md#day-3), [Day 4](journal.md#day-4), [Day 5](journal.md#day-5), [Day 6](journal.md#day-6), 
+[Day 1](journal.md#day-1), [Day 2](journal.md#day-2), [Day 3](journal.md#day-3), [Day 4](journal.md#day-4), [Day 5](journal.md#day-5), [Day 6](journal.md#day-6), [Day 7](journal.md#day-7), [Day 8](journal.md#day-8), [Day 9](journal.md#day-9),
 
 ## JOURNAL ENTRIES
 
@@ -154,7 +154,43 @@ I was also quite confused as to why, even though the score was increasing, the 1
 
 Since I will be implementing the bird's moves to be determined by the photoresistor, I made an 8-bit version of that as well.
 
+![](images/photoresistor8bit.png)
+
+**WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
+
+--------------------
+
+##### day-8
+### DAY 8: December 4
+
+Today, I decided to get help from Professor regarding why the buzzer was only working for specific and random pipes. After having a back and forth discussion in the Discord chat, I was able to finally learn that this was due to me reading both the variable Processing sends values to AND the variable Arduino sends values to.
+
+I thought you had to do this every time you declared a variable that connected Arduino and Processing, but from what Professor told me, I now know you only put it if you're looking for values sent from Processing to Arduino. This lead me to realize I have to remove one of my Serial.read() commands.
+
+![](images/discordconvo.png)
+
+**WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
+
+--------------------
+
+##### day-9
+### DAY 9: December 5
+
+I took Professor's advice and removed the Serial.read() from my command and it worked perfectly! Now that I had that out of the way, I wanted to start changing the control of the bird from the SPACEBAR to the PHOTORESISTOR. I started off by using a new breadboard to set up the photoresistor.
+
 ![](images/photoresistor.png)
+
+After this, I added a new array into my Processing file that would read the photoresistor and make the bird jump. However, after coding this and trying it out, it was a lot harder to use compared to the spacebar. After numerous trials, I couldn't even get to the 2nd point! Even though it will add more Processing-Arduino communication, I decided it's not worth it and went back to using the spacebar.
+
+![alt-text](images/photoresistorjump.gif)
+
+Because I wasn't using the photoresistor anymore, I had to change the 8-bit instruction. Using Adobe Illustrator, I changed the photoresistor to a spacebar.
+
+![](images/spacecontrol.png)
+
+Since I realized there was no instruction from the game itself to use the spacebar to make the bird move, I decided to add a 'Get Ready!' page and a visual instruction on how to make the bird fly. This comes after the player presses R to start, and stays there for around 5 seconds before the pipes start moving towards the bird.
+
+![](images/getreadynew.png)
 
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
