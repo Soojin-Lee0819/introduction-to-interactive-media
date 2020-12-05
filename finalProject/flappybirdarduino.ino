@@ -3,16 +3,15 @@
 
 //setting up variables
 byte val1;
-char val2;
+int val2;
 int speakerPin = 8;
 const int potentiometerPin = A0;
-const int photoresistorPin = A1;
 const int yellowButton = A2;
 const int redButton = A3;
 const int blueButton = A4;
 
-int inByte = 0;
-char incomingValue;
+int arduinoCommunication = 0;
+char processingCommunication;
 
 int yellowState = 0;
 int redState = 0;
@@ -79,8 +78,7 @@ void setup() {
 void loop() {
 
   if (Serial.available() > 0) {
-  inByte = Serial.read();
-  incomingValue = Serial.read();
+  processingCommunication = Serial.read();
 
   int potentiometerState = analogRead(potentiometerPin);
   val1 = map(potentiometerState, 0, 1023, 0, 4);
@@ -96,7 +94,7 @@ void loop() {
   
 
     //if bird is in the slot between the pipes, play 1-UP sound
-    if (incomingValue == '4') {
+    if (processingCommunication == '4') {
       for (int thisNote = 0; thisNote < 6; thisNote++) {
         int noteDuration = 1000 / noteDurations[thisNote];
         tone(speakerPin, melody[thisNote], noteDuration);
@@ -104,7 +102,7 @@ void loop() {
         delay(pauseBetweenNotes);
       }
       //if bird is not in the slot between the pipes, don't play 1-UP sound
-    } else if (incomingValue == '5') {
+    } else if (processingCommunication == '5') {
       noTone(speakerPin);
     }
     
@@ -143,7 +141,6 @@ void loop() {
       val2 = 2;
     }
   }
-
   Serial.write(val2);
   Serial.write(val1);
 }
