@@ -5,7 +5,7 @@
 My final project will make use of a Piezo buzzer, a potentiometer, a photoresistor, and three buttons that communicate to Processing to make a Flappy Bird game. When Processing starts to run, it plays the Mario Introduction melody. In the start screen, you are given the chance to either start the game or to customize your gameplay through changing the bird's color (through the buttons) or the background (through the potentiometer). Then, when the player starts the game, the bird begins to move down and it is up to the player to use the photo resistor to make the bird float through the pipes, playing the Mario 1-Up sound when successful and gaining a point. When the bird hits the ground or the pipes, it triggers the game over. I would want to try to make it so that, when the player presses the reset button on the Arduino board, it also resets the entire game, but I'm not sure if that is possible yet.
 
 ## SHORTCUTS
-[Day 1](journal.md#day-1),     [Day 2](journal.md#day-2),     [Day 3](journal.md#day-3),     [Day 4](journal.md#day-4),     [Day 5](journal.md#day-5),     [Day 6](journal.md#day-6),     [Day 7](journal.md#day-7),     [Day 8](journal.md#day-8),     [Day 9](journal.md#day-9),
+[Day 1](journal.md#day-1), [Day 2](journal.md#day-2), [Day 3](journal.md#day-3), [Day 4](journal.md#day-4), [Day 5](journal.md#day-5), [Day 6](journal.md#day-6), [Day 7](journal.md#day-7), [Day 8](journal.md#day-8), [Day 9](journal.md#day-9),
 
 ## JOURNAL ENTRIES
 
