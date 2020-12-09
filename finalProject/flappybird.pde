@@ -3,6 +3,7 @@
 // Use the R key to start the game, or press C to customize your game!
 // Use the Arduino buttons to change your bird's color, and the potentiometer to change your background!
 // Press the spacebar and fly into the pipes! If you hit any or hit the ground, you lose!
+// Press P to pause the game whenever you like!
 
 //importing communication
 import processing.serial.*;
@@ -26,10 +27,14 @@ PImage botPipe;
 PImage yellowbird;
 PImage redbird;
 PImage bluebird;
-PImage gameover;
+PImage gameoverbronze;
+PImage gameoversilver;
+PImage gameovergold;
 PImage startscreen;
 PImage getreadyscreen;
 PImage customizationscreen;
+PImage pausescreen;
+PImage playscreen;
 
 //declaring all distance variables
 int x1 = -5;
@@ -64,6 +69,7 @@ boolean player_start = false;
 boolean start_screen = true;
 boolean custom_screen = false;
 boolean get_ready = false;
+boolean paused = false;
 
 //declaring font variable
 PFont title;
@@ -93,10 +99,14 @@ void setup() {
   yellowbird = loadImage("yellowbird.png");
   redbird = loadImage("redbird.png");
   bluebird = loadImage("bluebird.png");
-  gameover = loadImage("gameover.png");
+  gameoverbronze = loadImage("gameoverbronze.png");
+  gameoversilver = loadImage("gameoversilver.png");
+  gameovergold = loadImage("gameovergold.png");
   startscreen = loadImage("start.png");
   getreadyscreen = loadImage("getready.png");
   customizationscreen = loadImage("customize.png");
+  pausescreen = loadImage("pause.png");
+  playscreen = loadImage("play.png");
 
   //declaring a bunch of pipes
   pipeX = new int[1000000];
@@ -142,6 +152,7 @@ void draw() {
     pipesMove();
     groundMove();
     score();
+    image(pausescreen, 0, 0, 508, 800);
   }
 
   getreadyScreen();
@@ -197,7 +208,7 @@ void pipesMove() {
 void dayMode() {
   image(bg1, x1, 0, 508, 800);
   x1--;
-  if (x1 != -5) {
+  if (x1 != -3) {
     image(bg1, x2, 0, 508, 800);
     x2--;
   }
@@ -283,14 +294,30 @@ void birdMove() {
 }
 
 //pressing spacebar
-void keyPressed() {
+public void keyPressed() {
   if (key == ' ') {
     velocity = -8;
+  }
+  if ( key == 'p' && player_start == true) {
+
+    paused = !paused;
+
+    //will pause animation and play it again once P is pressed
+    if (paused) {
+      noLoop();
+      image(playscreen, 0, 0, 508, 800);
+    } else {
+      loop();
+    }
   }
 }
 
 //putting score on upper left corner
 void score() {
+  fill(71, 31, 0, 127);
+  textFont(title);
+  textSize(20);
+  text("Score: " + score, 20, 43);
   fill(255);
   textFont(title);
   textSize(20);
@@ -339,7 +366,7 @@ void customizeScreen() {
       custom_screen = true;
       start_screen = false;
       time = millis();
-    } 
+    }
   }
   if (keyPressed) {
     if ((custom_screen == true) && (key == 'r')) {
@@ -387,10 +414,20 @@ void customizeScreen() {
 //player losing screen
 void playerLose() {
   if (player_lose == true) {
-    image(gameover, 0, 0, 508, 800);
-    fill(255);
-    textSize(25);
-    text(score, 290, 463);
+    //if player reaches certain amount of points, they get a medal
+    if (score <= 10) {
+      image(gameoverbronze, 0, 0, 508, 800);
+    } else if (score > 10 && score <= 20) {
+      image(gameoversilver, 0, 0, 508, 800);
+    } else if (score > 20) {
+      image(gameovergold, 0, 0, 508, 800);
+    }
+    fill(255, 255, 241);
+    textSize(40);
+    text(score, 320, 475);
+    fill(214, 160, 64);
+    textSize(40);
+    text(score, 320, 470);
     x1 = 0;
     x2 = 0;
     //pauses everything
