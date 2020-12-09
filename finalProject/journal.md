@@ -5,7 +5,7 @@
 My final project will make use of a Piezo buzzer, a potentiometer, a photoresistor, and three buttons that communicate to Processing to make a Flappy Bird game. When Processing starts to run, it plays the Mario Introduction melody. In the start screen, you are given the chance to either start the game or to customize your gameplay through changing the bird's color (through the buttons) or the background (through the potentiometer). Then, when the player starts the game, the bird begins to move down and it is up to the player to use the photo resistor to make the bird float through the pipes, playing the Mario 1-Up sound when successful and gaining a point. When the bird hits the ground or the pipes, it triggers the game over. I would want to try to make it so that, when the player presses the reset button on the Arduino board, it also resets the entire game, but I'm not sure if that is possible yet.
 
 ## SHORTCUTS
-[Day 1](journal.md#day-1), [Day 2](journal.md#day-2), [Day 3](journal.md#day-3), [Day 4](journal.md#day-4), [Day 5](journal.md#day-5), [Day 6](journal.md#day-6), [Day 7](journal.md#day-7), [Day 8](journal.md#day-8), [Day 9](journal.md#day-9),
+[Day 1](journal.md#day-1), [Day 2](journal.md#day-2), [Day 3](journal.md#day-3), [Day 4](journal.md#day-4), [Day 5](journal.md#day-5), [Day 6](journal.md#day-6), [Day 7](journal.md#day-7), [Day 8](journal.md#day-8), [Day 9](journal.md#day-9), [Day 10](journal.md#day-10)
 
 ## JOURNAL ENTRIES
 
@@ -197,6 +197,32 @@ Knowing that the components in my Arduino will no longer be changed, I created t
 ![](images/schematic.png)
 
 I may be done with this project! I might give it a few days because I might want to add something, but overall, I think I'm finished!
+
+**WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
+
+--------------------
+
+##### day-10
+### DAY 10: December 8
+
+Happy Tuesday! I decided to add a few final touches to my game to really make things come together. Using [this link](https://stackoverflow.com/questions/45202108/how-to-pause-play-a-sketch-in-processing-with-the-same-button), I managed to make the game pause and play when the player presses the 'P' key. After getting this to work, I began to look for the pause and play buttons found in the actual game
+
+![](images/playbutton.png)
+![](images/pausebutton.png)
+
+Implementing them into my game, I now give the user visual presentation that you can pause the game by pressing 'P', and it will stay in the "PAUSED" state until you resume with 'P' again.
+
+![](images/paused.png)
+
+Deciding my score at the Game Over screen was too boring, I wanted to give the player a reward when finishing the game. I then began to look for the medals the game uses when the player reaches a certain amount of points.
+
+![](images/bronze.png)
+![](images/silver.png)
+![](images/gold.png)
+
+Though it is flexible, I coded my game so that if the player gets less than 10 as a score, they get bronze, they get 10-20, they get silver, and when they reach more than 20, they get gold. An example of the gameover screen is below:
+
+![](images/gameovermedal.png)
 
 **WILL I CHANGE MY PROJECT?** Because the process was relatively smooth, I do not want to change my project.
 
