@@ -205,7 +205,7 @@ I may be done with this project! I might give it a few days because I might want
 ##### day-10
 ### DAY 10: December 8
 
-Happy Tuesday! I decided to add a few final touches to my game to really make things come together. Using [this link](https://stackoverflow.com/questions/45202108/how-to-pause-play-a-sketch-in-processing-with-the-same-button), I managed to make the game pause and play when the player presses the 'P' key. After getting this to work, I began to look for the pause and play buttons found in the actual game
+Happy Tuesday! I decided to add a few final touches to my game to really make things come together. Using [this link](https://stackoverflow.com/questions/45202108/how-to-pause-play-a-sketch-in-processing-with-the-same-button), I managed to make the game pause and play when the player presses the 'P' key. After getting this to work, I began to look for the pause and play buttons found in the actual game.
 
 ![](images/playbutton.png)
 ![](images/pausebutton.png)
