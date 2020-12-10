@@ -1,6 +1,6 @@
 # INTERACTIVE MEDIA FINAL ASSIGNMENT: Flappy Bird Processing and Arduino
 
-This week's assignment made use of the Piezo buzzer and the potentiometer that communicated to Processing to make a Flappy Bird game. When Processing starts to run, it plays the Mario Introduction melody. Then, the game begins and the bird uses the J key to make the bird float through the pipes, playing the Mario 1-Up sound when successful and gaining a point. When the bird hits the ground or the pipes, it triggers the game over.
+My final project will make use of a Piezo buzzer, a potentiometer, a photoresistor, and three buttons that communicate to Processing to make a Flappy Bird game. When Processing starts to run, it plays the Mario Introduction melody. In the start screen, you are given the chance to either start the game or to customize your gameplay through changing the bird's color (through the buttons) or the background (through the potentiometer). Then, when the player starts the game, the bird begins to move down and it is up to the player to use the photo resistor to make the bird float through the pipes, playing the Mario 1-Up sound when successful and gaining a point. When the bird hits the ground or the pipes, it triggers the game over. I would want to try to make it so that, when the player presses the reset button on the Arduino board, it also resets the entire game, but I'm not sure if that is possible yet.
 
 ## Schematic
 
@@ -44,7 +44,24 @@ Lastly, before connecting the files between Processing and Arduino, I did not kn
 
 ## Final Game
 
-The final game is below:
+The final game is described accordingly:
 
-![alt-text](images/finalgame.gif)
+### 1. Starting Screen
 
+![](images/start.png)
+
+### 2. Customization Screen
+
+![alt-text](images/customizationnew.gif)
+
+### 3. Playing Screen
+
+![](images/getreadynew.png)
+
+![alt-text](images/birdmove3.gif)
+
+![](images/paused.png)
+
+### 4. Game Over Screen
+
+![](images/gameovermedal.png)
