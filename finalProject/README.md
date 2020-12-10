@@ -1,6 +1,6 @@
 # INTERACTIVE MEDIA FINAL ASSIGNMENT: Flappy Bird Processing and Arduino
 
-My final project will make use of a Piezo buzzer, a potentiometer, and three buttons that communicate to Processing to make a Flappy Bird game.
+My final project will make use of a Piezo buzzer, a potentiometer, and three buttons that communicate to Processing to make a Flappy Bird game with an additional Customization Page that communicates Arduino to Processing.
 
 ## Schematic
 
