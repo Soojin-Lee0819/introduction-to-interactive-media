@@ -56,6 +56,21 @@ Lastly, a problem I was having was making the buttons not PUSH-buttons, but STAT
 
 ![alt-text](images/serial1.gif)
 
+However, I was able to get it to work using a code that I refined to make it work for all three buttons:
+
+    if (yellowPush % 2 == 1) {
+          yellowPush = 0;
+          val2 = 0;
+        }
+        if ((redPush % 2 == 1)) {
+          redPush = 0;
+          val2 = 1;
+        }
+        if (bluePush % 2 == 1) {
+          bluePush = 0;
+          val2 = 2;
+        }
+
 ## Final Game
 
 The final game is described accordingly:
