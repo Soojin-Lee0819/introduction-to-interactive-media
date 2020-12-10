@@ -151,6 +151,7 @@ void loop() {
     Serial.write(val2);
     Serial.write(val1);
   }
+}
 
   //establish contact between Arduino and Processing
   void establishContact() {
