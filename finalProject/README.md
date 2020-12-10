@@ -52,7 +52,7 @@ NEW (simple version):
 
 ### Button State-Reading
 
-Lastly, a problem I was having was making the buttons not PUSH-buttons, but STATE-buttons, meaning it would turn on when I press it once and turn off if I press it again. This was quite hard to do, as the tutorials I found made use of only one button. This meant my buttons would only change their state if the other two were off.
+A problem I was having was making the buttons not PUSH-buttons, but STATE-buttons, meaning it would turn on when I press it once and turn off if I press it again. This was quite hard to do, as the tutorials I found made use of only one button. This meant my buttons would only change their state if the other two were off.
 
 ![alt-text](images/serial1.gif)
 
@@ -70,6 +70,14 @@ However, I was able to get it to work using a code that I refined to make it wor
           bluePush = 0;
           val2 = 2;
         }
+
+### Processing-Arduino Communication
+
+Lastly, a problem I was having was regarding my Piezo buzzer: even though Processing was printing that the bird passed the pipes and the player's score would increase, it wouldn't play the 1-UP sound effect. I thought this was a problem with the buzzer itself.
+
+However, having a talk with Professor, I realized that this was due to me serial reading an Arduino variable that _Arduino_ sends values to, even if thats not necessary because I only need to read the Processing variables.
+
+![](images/discordconvo.png)
 
 ## Final Game
 
