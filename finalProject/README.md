@@ -18,7 +18,7 @@ Thankfully, I was able to come across an old game that I played back in 2015, Fl
 
 ![](images/assets.png)
 
-## Idea 
+## IDEA 
 
 So, basing it primarily off the rules of this game, the instructions are simple: the player is shown a starting screen that plays alongside the Arduino-style [Pacman theme song](https://github.com/robsoncouto/arduino-songs/blob/master/pacman/pacman.ino). If the player presses the R key, they can start the game. If they press the C key, it takes them to a customization page. To fly, they just use the spacebar to avoid the pipes. Every time they successfully avoid a pipe, the [Mario 1-UP sound](https://bikeshedeffect.weebly.com/arduino-piezo-sounds.html) will play on the buzzer. If the player falls or hits a pipe, they lose.
 
