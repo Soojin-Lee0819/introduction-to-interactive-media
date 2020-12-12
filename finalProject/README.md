@@ -2,13 +2,13 @@
 
 My final project will make use of a Piezo buzzer, a potentiometer, and three buttons that communicate to Processing to make a Flappy Bird game with an additional Customization Page that communicates Arduino to Processing.
 
-## Schematic
+## SCHEMATIC
 
 The schematic of this idea is below, which is much simpler compared to our purely Arduino assignments. This only makes use of the potentiometer, three buttons, and a buzzer.
 
 ![](images/schematic.png)
 
-## Inspiration
+## INSPIRATION
 
 My inspiration for this product was through the Piezo buzzer. I noticed that most of the songs produced on there eminated quite an 8-bit sound, so I wanted my game to embody that as well just to make it well rounded. I first wanted to do Pacman, which I started for the first few days, but it was a bit too difficult as you would need many constraints for the maze. 
 
@@ -22,7 +22,7 @@ Thankfully, I was able to come across an old game that I played back in 2015, Fl
 
 So, basing it primarily off the rules of this game, the instructions are simple: the player is shown a starting screen that plays alongside the Arduino-style [Pacman theme song](https://github.com/robsoncouto/arduino-songs/blob/master/pacman/pacman.ino). If the player presses the R key, they can start the game. If they press the C key, it takes them to a customization page. To fly, they just use the spacebar to avoid the pipes. Every time they successfully avoid a pipe, the [Mario 1-UP sound](https://bikeshedeffect.weebly.com/arduino-piezo-sounds.html) will play on the buzzer. If the player falls or hits a pipe, they lose.
 
-## Process and Setbacks
+## SETBACKS
 
 ### Collision Detection
 
@@ -79,7 +79,7 @@ However, having a talk with Professor, I realized that this was due to me serial
 
 ![](images/discordconvo.png)
 
-## Final Game
+## FINAL GAME
 
 The final game is described accordingly:
 
@@ -115,7 +115,7 @@ When the bird hits the ground or the pipes, it triggers the game over. The Game 
 
 ![](images/gameovermedal.png)
 
-## Video Playthrough
+## VIDEO PLAYTHROUGH
 
 The video of this playthrough can be seen in [this link](https://youtu.be/TgaU9xBielg).
 
