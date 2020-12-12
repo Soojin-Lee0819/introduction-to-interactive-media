@@ -114,3 +114,9 @@ The player is able to pause and resume the game with the 'P' key.
 When the bird hits the ground or the pipes, it triggers the game over. The Game Over screen shows you your score and the medal you got: if you get 0-10 points, you get a bronze medal, if you get 10-20 points, you get a silver medal, if you get more than 20 points, you get a gold medal.
 
 ![](images/gameovermedal.png)
+
+## Video Playthrough
+
+The video of this playthrough can be seen in [this link](https://youtu.be/TgaU9xBielg).
+
+![](images/thumbnail.png)
